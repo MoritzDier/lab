@@ -10,13 +10,15 @@ module.exports = {
     "**/*.html",
   ],
   theme: {
-    extend: {
-      colors: {
-        ...defaultTheme.colors, // 🟢 hier aktivierst du die Standardfarben
-        primary: "#000",
-        secondary: "#fff",
-      },
-    },
+   extend: {
+  colors: {
+    ...defaultTheme.colors,
+    'green-200': '#bbf7d0',
+    'blue-200': '#bfdbfe',
+    primary: "#000",
+    secondary: "#fff",
+  }
+}
   },
   plugins: [],
 };
