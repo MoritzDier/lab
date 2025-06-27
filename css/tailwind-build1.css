@@ -1,0 +1,9 @@
+
+/* Tailwind CSS v3 – Standardfarben */
+.bg-blue-200 { background-color: #bfdbfe; }
+.bg-green-200 { background-color: #bbf7d0; }
+.bg-purple-200 { background-color: #e9d5ff; }
+.text-left { text-align: left; }
+.p-1 { padding: 0.25rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+/* ... (weitere Klassen wären hier enthalten) */
