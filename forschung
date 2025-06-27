@@ -27,11 +27,11 @@
       <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="https://moritzdier.github.io/lab/">Wissenschaft & Praxis</a>
       <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
         <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
-          <a class="header-links" href="">Über mich</a>
-          <a class="header-links" href="">Modelle & Konzepte</a>
+          <a class="header-links" href="mich.html">Über mich</a>
+          <a class="header-links" href="modelle.html">Modelle & Konzepte</a>
           <a class="header-links" href="forschung.html">Forschung</a>
           <a class="header-links" href="lehre.html">Lehre</a>
-          <a class="header-links" href="">Blog</a>
+          <a class="header-links" href="blog.html">Blog</a>
         </div>
         <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
           <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="Kontakt" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
