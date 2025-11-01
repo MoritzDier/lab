@@ -1,1 +1,131 @@
-test
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Könnerschaft und mutualistische Symbiose – Blog | Dr. Moritz Dier</title>
+    <meta name="description" content="Was ist Könnerschaft – und wie entsteht sie als mutualistische Symbiose von Wissen, Können und Wollen?" />
+    <link rel="shortcut icon" href="../assets/logoN.png" type="image/x-icon" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Könnerschaft und mutualistische Symbiose – Blog | Dr. Moritz Dier" />
+    <meta property="og:description" content="Theoriegeleitet-praxisintervenierend – erfahrungsbasiert-theoriemodifizierend." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://moritzdier.github.io/lab/blog/eintrag-1.html" />
+    <meta property="og:image" content="https://moritzdier.github.io/lab/assets/images/home/design.jpg" />
+
+    <!-- Styles (gleich wie auf Startseite, aber relativ!) -->
+    <link rel="stylesheet" href="../css/tailwind-build.css">
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+
+    <!-- Header (identisch, aber Links relativ aus /blog/) -->
+    <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
+      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="../index.html">Wissenschaft & Praxis</a>
+      <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+        <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+          <a class="header-links" href="../modelle.html">Modelle & Konzepte</a>
+          <a class="header-links" href="../forschung.html">Forschung</a>
+          <a class="header-links" href="../lehre.html">Lehre</a>
+          <a class="header-links" href="../mich.html">Über mich</a>
+        </div>
+        <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
+          <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="Kontakt" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
+            <span>Kontakt</span>
+            <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header>
+
+    <!-- Artikel-Header/Hero -->
+    <section class="tw-relative tw-mt-[120px] tw-w-full tw-px-[5%] max-lg:tw-px-4">
+      <div class="tw-max-w-4xl tw-mx-auto">
+        <a href="../index.html#blog" class="tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-text-gray-600 hover:tw-underline">
+          <i class="bi bi-arrow-left"></i> Zurück zu Neuigkeiten
+        </a>
+        <h1 class="tw-mt-4 tw-text-4xl tw-font-semibold max-lg:tw-text-3xl">Könnerschaft und mutualistische Symbiose</h1>
+        <div class="tw-mt-2 tw-flex tw-flex-wrap tw-items-center tw-gap-3 tw-text-sm tw-text-gray-600">
+          <time datetime="2025-11-01">01.11.2025</time>
+          <span>•</span>
+          <span>Lesedauer: 5&nbsp;Min</span>
+          <span class="tw-inline-flex tw-items-center tw-gap-2 tw-rounded-full tw-border tw-border-black tw-px-2 tw-py-0.5 tw-text-xs tw-text-black">Theorie ↔ Praxis</span>
+          <span class="tw-inline-flex tw-items-center tw-gap-2 tw-rounded-full tw-border tw-border-black tw-px-2 tw-py-0.5 tw-text-xs tw-text-black">Berufliche Bildung</span>
+        </div>
+
+        <div class="tw-mt-6 tw-overflow-hidden tw-rounded-xl tw-shadow-md">
+          <img src="../assets/images/home/design.jpg" alt="Headerbild zum Beitrag" class="tw-w-full tw-h-[260px] tw-object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Artikel-Körper -->
+    <main class="tw-relative tw-w-full tw-px-[5%] tw-py-8 max-lg:tw-px-4">
+      <article class="tw-max-w-3xl tw-mx-auto tw-text-justify tw-leading-7 tw-text-gray-800">
+        <!-- Intro -->
+        <p class="tw-mb-4">
+          Könnerschaft verstehe ich als wechselseitig verstärkende Einheit von <strong>Wissen</strong>, <strong>Können</strong> und <strong>Wollen</strong>,
+          die sich im Handeln in komplexen beruflichen Situationen bewährt. Diese Einheit entsteht in einer
+          <em>mutualistischen Symbiose</em> von Theorie und Praxis: Theorie leitet Handeln an, Praxis verändert Theorie.
+        </p>
+
+        <!-- Zwischenüberschriften im Stil deiner Seite -->
+        <h2 class="tw-mt-8 tw-mb-3 tw-text-2xl tw-font-semibold">Theoriegeleitet – praxisintervenierend</h2>
+        <p class="tw-mb-4">
+          Forschung soll nicht nur beschreiben, sondern gestalten: Im Unterricht, in Fortbildungen und in Schulentwicklung.
+          Interventionen sind daher nicht Add-ons, sondern Prüfstände für theoretische Annahmen.
+        </p>
+
+        <h2 class="tw-mt-8 tw-mb-3 tw-text-2xl tw-font-semibold">Erfahrungsbasiert – theoriemodifizierend</h2>
+        <p class="tw-mb-4">
+          Systematische Erfahrungen (Design-Based Research, formative Evaluation) liefern die Evidenz, um Modelle zu präzisieren
+          und Begriffe zu schärfen – bis hin zur Theoriegenerierung.
+        </p>
+
+        <!-- Zitatbox wie deine Karten/Boxen -->
+        <blockquote class="tw-mt-8 tw-border-2 tw-border-black tw-bg-white tw-rounded-lg tw-p-4 tw-text-base tw-italic">
+          Praxis ohne Theorie bleibt blind. Theorie ohne Praxis bleibt leer. – Ziel ist ihre Könnerschaft.
+        </blockquote>
+
+        <!-- Callout/Weiterführendes -->
+        <div class="tw-mt-8 tw-rounded-lg tw-bg-[#e7e6e685] tw-p-4">
+          <div class="tw-text-sm tw-text-gray-700">
+            Weiterführend: <a href="../modelle.html" class="tw-underline">Modelle & Konzepte</a> •
+            <a href="../forschung.html" class="tw-underline">Forschung</a>
+          </div>
+        </div>
+
+        <!-- Footer des Artikels -->
+        <hr class="tw-my-8" />
+        <div class="tw-flex tw-flex-wrap tw-items-center tw-justify-between tw-gap-3 tw-text-sm tw-text-gray-600">
+          <div>Veröffentlicht von Dr. Moritz Dier</div>
+          <div class="tw-flex tw-gap-3">
+            <a class="tw-underline" href="mailto:Moritz.Dier@uni-bayreuth.de">Feedback per Mail</a>
+            <a class="tw-underline" href="../index.html#blog">Zurück zu Neuigkeiten</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer (identisch) -->
+    <hr class="tw-mt-4" />
+    <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
+      <div class="tw-flex tw-gap-6 tw-text-2xl">
+        <a href="https://moritzdier.github.io/lab/" aria-label="Github"><i class="bi bi-github"></i></a>
+        <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
+      </div>
+    </footer>
+
+    <!-- Scripts (relativ aus /blog/) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../index.js"></script>
+  </body>
+</html>
