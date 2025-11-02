@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publikationen | Dr. Moritz Dier</title>
+    <meta name="description" content="Wissenschaftliche Veröffentlichungen, Konferenzbeiträge und Workshops von Dr. Moritz Dier – Berufspädagogik, Technikdidaktik und KI in der Lehrkräftebildung." />
+    <link rel="shortcut icon" href="./assets/logoN.png" type="image/x-icon" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Publikationen | Dr. Moritz Dier" />
+    <meta property="og:description" content="Artikel, Buchkapitel und Konferenzbeiträge zur beruflichen Lehrkräftebildung und KI." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moritzdier.github.io/lab/publikationen.html" />
+    <meta property="og:image" content="https://moritzdier.github.io/lab/assets/images/home/design.jpg" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/tailwind-build.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-font-mono">
+
+    <!-- Header -->
+    <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
+      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="./index.html">Wissenschaft & Praxis</a>
+      <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+        <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+          <a class="header-links" href="modelle.html">Modelle & Konzepte</a>
+          <a class="header-links" href="forschung.html">Forschung</a>
+          <a class="header-links" href="lehre.html">Lehre</a>
+          <a class="header-links" href="publikationen.html">Publikationen</a>
+          <a class="header-links" href="mich.html">Über mich</a>
+        </div>
+        <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
+          <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="Kontakt"
+             class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
+            <span>Kontakt</span>
+            <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+              onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header>
+
+    <!-- Titel -->
+    <section class="tw-relative tw-mt-[140px] tw-px-[5%] tw-pt-8 tw-pb-6 max-lg:tw-px-4">
+      <div class="tw-max-w-5xl tw-mx-auto">
+        <span class="tw-inline-block tw-bg-blue-200 tw-text-black tw-px-3 tw-py-1 tw-rounded">Publikationen</span>
+        <h1 class="tw-mt-3 tw-text-5xl tw-font-semibold max-lg:tw-text-4xl">Wissenschaftliche Veröffentlichungen</h1>
+        <p class="tw-mt-3 tw-text-lg tw-text-gray-700 tw-max-w-3xl">
+          Hier findent Sie meine Artikel, Buchkapitel, Konferenzbeiträge usw.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter -->
+    <section class="tw-px-[5%] tw-pb-4 max-lg:tw-px-4">
+      <div class="tw-max-w-5xl tw-mx-auto tw-flex tw-flex-col tw-gap-4 lg:tw-items-center lg:tw-justify-between lg:tw-flex-row">
+        <div class="tw-flex tw-flex-wrap tw-gap-2" id="typeFilters">
+          <button data-type="all" class="tw-px-3 tw-py-1 tw-rounded tw-border tw-border-black tw-bg-black tw-text-white">Alle</button>
+          <button data-type="article" class="tw-px-3 tw-py-1 tw-rounded tw-border tw-border-black">Artikel</button>
+          <button data-type="chapter" class="tw-px-3 tw-py-1 tw-rounded tw-border tw-border-black">Buchkapitel</button>
+          <button data-type="thesis" class="tw-px-3 tw-py-1 tw-rounded tw-border tw-border-black">Dissertation</button>
+          <button data-type="conference" class="tw-px-3 tw-py-1 tw-rounded tw-border tw-border-black">Konferenz</button>
+          <button data-type="talk" class="tw-px-3 tw-py-1 tw-rounded tw-border tw-border-black">Vorträge / Workshops</button>
+        </div>
+
+        <div class="tw-flex tw-flex-wrap tw-gap-2">
+          <select id="yearFilter" class="tw-border tw-border-gray-300 tw-rounded tw-px-3 tw-py-1">
+            <option value="all">Alle Jahre</option>
+            <option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2013</option>
+          </select>
+          <input id="searchInput" type="search" placeholder="Suchen (Titel, Journal, Autor)…"
+                 class="tw-border tw-border-gray-300 tw-rounded tw-px-3 tw-py-1 tw-w-[240px] max-lg:tw-w-[200px]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Publikationen ======= -->
+    <main class="tw-px-[5%] tw-pb-10 max-lg:tw-px-4">
+      <div class="tw-max-w-5xl tw-mx-auto">
+        <!-- hier steht der Publikationsblock -->
+           <!-- 2025 -->
+    <section class="pub-year-group" data-year="2025">
+      <h2 class="tw-text-2xl tw-font-semibold tw-border-b tw-border-gray-300 tw-pb-1">2025</h2>
+      <ul class="tw-mt-4 tw-space-y-4">
+        <!-- Artikel -->
+        <li class="pub-item" data-type="article" data-year="2025" data-text="KI-Kompetenzprofile beruflicher Lehrkräfte JOTED TAICS Dier 13(2) 66–85">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M.</strong> (2025). <em>KI-Kompetenzprofile von Lehrkräften an beruflichen Schulen: Vom Wissen zum didaktischen Handeln.</em>
+              <span class="tw-text-gray-700">Journal of Technical Education (JOTED), 13(2), 66–85.</span>
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://doi.org/10.48513/joted.v13i2.328" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2024 -->
+    <section class="pub-year-group tw-mt-10" data-year="2024">
+      <h2 class="tw-text-2xl tw-font-semibold tw-border-b tw-border-gray-300 tw-pb-1">2024</h2>
+      <ul class="tw-mt-4 tw-space-y-4">
+        <!-- Zeitschriftenartikel -->
+        <li class="pub-item" data-type="article" data-year="2024" data-text="Educational Digital Support Agent DSA-E Lehr-Lern-Begleitung Berufliche Bildung Zeitschrift für Berufs- und Wirtschaftspädagogik ZBW 120 2024/3 450-473">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M.</strong> (2024). <em>Educational Digital Support Agent (DSA-E) zur Lehr-Lern-Begleitung in der Beruflichen Bildung.</em>
+              <span class="tw-text-gray-700">Zeitschrift für Berufs- und Wirtschaftspädagogik, 120(3), 450–473.</span>
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://doi.org/10.25162/zbw-2024-0018" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Dissertation -->
+        <li class="pub-item" data-type="thesis" data-year="2024" data-text="Dissertation KI-unterstützte Aktivierung Subjektiver Theorien Universitätsberufsschule Bayreuth">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M.</strong> (2024). <em>KI-unterstützte Aktivierung Subjektiver Theorien in der Lehrkräftebildung an der Universitätsberufsschule.</em> Dissertation, Universität Bayreuth.
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://nbn-resolving.org/urn:nbn:de:bvb:703-epub-7749-0" target="_blank" rel="noopener">URN</a>
+              <a class="tw-underline" href="https://doi.org/10.15495/EPub_UBT_00007749" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Handbuch-Kapitel -->
+        <li class="pub-item" data-type="chapter" data-year="2024" data-text="Universität & Berufsschule gewerblich-technische Universitätsschule Bayreuth Handbuch Standorte beruflicher Lehrkräftebildung wbv">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M.</strong> (2024). <em>Universität &amp; Berufsschule: Die gewerblich-technische Universitätsschule Bayreuth – Konzeption, Herausforderungen, Entwicklungen.</em>
+              In S. Lange, C. Porcher &amp; K. Trampe (Hrsg.), <span class="tw-text-gray-700">Handbuch Standorte beruflicher Lehrkräftebildung in Deutschland.</span> Bielefeld: wbv.
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://doi.org/10.3278/9783763973743" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Buchbeitrag (BIRD) – technische Realisierung -->
+        <li class="pub-item" data-type="chapter" data-year="2024" data-text="Technische Realisierung bildungsbereichsübergreifende Weiterbildung Blended-Learning Lernmanagementsysteme BIRD DQR-5 epubli">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Breuer, J., Dier, M., &amp; Wiedemann, M.</strong> (2024). <em>Technische Realisierung einer bildungsbereichsübergreifenden Weiterbildung im Blended-Learning-Design …</em>
+              In K. Wilbers (Hrsg.), <span class="tw-text-gray-700">Geprüfte Berufsspezialisten/innen für Industrielle Transformation</span>. Berlin: epubli (Texte zur WiPäd &amp; PE; 37).
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://nbn-resolving.org/urn:nbn:de:0111-pedocs-308738" target="_blank" rel="noopener">URN</a>
+              <a class="tw-underline" href="https://doi.org/10.25656/01:30873" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Buchbeitrag (BIRD) – Verstetigung -->
+        <li class="pub-item" data-type="chapter" data-year="2024" data-text="Praktische Verstetigung Fortbildung Kontext Bayreuth IHK BIRD DQR-5 epubli">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M., Göpel, R., Hager, A., &amp; Hofmann, T.</strong> (2024). <em>Die praktische Verstetigung der Fortbildung im Kontext Bayreuth …</em>
+              In K. Wilbers (Hrsg.), <span class="tw-text-gray-700">Geprüfte Berufsspezialisten/innen für Industrielle Transformation</span>. Berlin: epubli (Texte zur WiPäd &amp; PE; 37).
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://nbn-resolving.org/urn:nbn:de:0111-pedocs-308738" target="_blank" rel="noopener">URN</a>
+              <a class="tw-underline" href="https://doi.org/10.25656/01:30873" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Magazinbeitrag/Interview -->
+        <li class="pub-item" data-type="other" data-year="2024" data-text="Interview IHK starter Ausbildungsmagazin Theorie und Praxis 2024 2025">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M., &amp; Hofmann, T.</strong> (2024/2025). <em>Theorie und Praxis – Interview mit zwei Berufsschullehrern.</em>
+              <span class="tw-text-gray-700">starter – Das Ausbildungsmagazin der IHK Oberfranken Bayreuth</span>, S. 102.
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://www.ihk.de/blueprint/servlet/resource/blob/5927388/a69eb6b7db5d41499015cf5000ddf63f/starter-data.pdf" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2023 -->
+    <section class="pub-year-group tw-mt-10" data-year="2023">
+      <h2 class="tw-text-2xl tw-font-semibold tw-border-b tw-border-gray-300 tw-pb-1">2023</h2>
+      <ul class="tw-mt-4 tw-space-y-4">
+        <li class="pub-item" data-type="chapter" data-year="2023" data-text="Herausforderungen Planung Umsetzung Blended-Learning innovative Themenfelder BIRD epubli Texte zur WiPäd & PE 32">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M.</strong> (2023). <em>Herausforderungen bei der Planung und Umsetzung von Blended-Learning-Unterricht in und zu innovativen Themenfeldern.</em>
+              In K. Wilbers (Hrsg.), <span class="tw-text-gray-700">Geprüfte Berufsspezialisten/innen für Industrielle Transformation</span>. Berlin: epubli (Texte zur WiPäd &amp; PE; 32).
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://nbn-resolving.org/urn:nbn:de:0111-pedocs-265344" target="_blank" rel="noopener">URN</a>
+              <a class="tw-underline" href="https://doi.org/10.25656/01:26534" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2022 -->
+    <section class="pub-year-group tw-mt-10" data-year="2022">
+      <h2 class="tw-text-2xl tw-font-semibold tw-border-b tw-border-gray-300 tw-pb-1">2022</h2>
+      <ul class="tw-mt-4 tw-space-y-4">
+        <li class="pub-item" data-type="chapter" data-year="2022" data-text="Rahmenplan Gestaltung Geprüfter Berufsspezialist Industrielle Transformation IHK BIRD epubli Texte zur WiPäd & PE 28">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M., Hager, A., &amp; Müller, F.</strong> (2022). <em>Bereichsübergreifende Rahmenplangestaltung zum anerkannten Abschluss „Geprüfter Berufsspezialist für Industrielle Transformation (IHK) / Geprüfte Berufsspezialistin …“.</em>
+              In K. Wilbers (Hrsg.), <span class="tw-text-gray-700">Durchlässigkeit und industrielle Transformation auf dem DQR-Niveau 5 gestalten</span>. Berlin: epubli (Texte zur WiPäd &amp; PE; 28).
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://nbn-resolving.org/urn:nbn:de:0111-pedocs-243721" target="_blank" rel="noopener">URN</a>
+              <a class="tw-underline" href="https://doi.org/10.25656/01:24372" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item" data-type="chapter" data-year="2022" data-text="Partner und ihre Anliegen Universität Bayreuth BIRD epubli Texte zur WiPäd & PE 28">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M.</strong> (2022). <em>Die Partner und ihre Anliegen – die Universität Bayreuth.</em>
+              In K. Wilbers (Hrsg.), <span class="tw-text-gray-700">Durchlässigkeit und industrielle Transformation auf dem DQR-Niveau 5 gestalten</span>. Berlin: epubli (Texte zur WiPäd &amp; PE; 28).
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+              <a class="tw-underline" href="https://nbn-resolving.org/urn:nbn:de:0111-pedocs-243721" target="_blank" rel="noopener">URN</a>
+              <a class="tw-underline" href="https://doi.org/10.25656/01:24372" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2013 -->
+    <section class="pub-year-group tw-mt-10" data-year="2013">
+      <h2 class="tw-text-2xl tw-font-semibold tw-border-b tw-border-gray-300 tw-pb-1">2013</h2>
+      <ul class="tw-mt-4 tw-space-y-4">
+        <li class="pub-item" data-type="conference" data-year="2013" data-text="Mathematische Betrachtung Vergleich Verfahren Topologieoptimierungsprozess Bayreuther 3D Konstrukteurstag">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <div>
+              <strong>Dier, M., &amp; Frisch, M.</strong> (2013). <em>Mathematische Betrachtung und Vergleich von Verfahren im Topologieoptimierungsprozess.</em>
+              In F. Rieg &amp; R. Hackenschmidt (Hrsg.), <span class="tw-text-gray-700">15. Bayreuther 3D-Konstrukteurstag</span>. Bayreuth.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+        <!-- ========== Konferenz, Vorträge & Workshops ========== -->
+        <section class="pub-year-group tw-mt-14" data-year="talks">
+          <h2 class="tw-text-2xl tw-font-semibold tw-border-b tw-border-gray-300 tw-pb-1">
+            Konferenzbeiträge, Vorträge & Workshops
+          </h2>
+
+          <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">2025</h3>
+          <ul class="tw-mt-3 tw-space-y-3">
+            <li class="pub-item" data-type="talk" data-year="2025" data-text="Universitätsberufsschule Bayreuth Dillingen">
+              <strong>Dier, M.</strong> (2025). <em>Die gewerblich-technische Universitätsberufsschule Bayreuth – Der aktuelle Stand des Bayreuther Universitätsschulkonzepts.</em> Arbeitstagung Uni-Schulkonzept berufliche Schulen Bayern, 01.–02.10. Dillingen.
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2025" data-text="KI-souveräne berufspädagogisch-didaktische Könnerschaft DGfE Darmstadt">
+              <strong>Dier, M.</strong> (2025). <em>KI-souveräne berufspädagogisch-didaktische Könnerschaft.</em> DGfE-Sektionstagung Berufs- und Wirtschaftspädagogik, 24.–26.09. Darmstadt.
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2025" data-text="Educational Digital Support Agents Ringvorlesung Gießen online">
+              <strong>Dier, M.</strong> (2025). <em>Educational Digital Support Agents (DSA-E).</em> Ringvorlesung „Technische Megatrends vom Lehramt her denken“, 07.06., Gießen (online).
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2025" data-text="DSA-E AI Day Bayreuth">
+              <strong>Dier, M.</strong> (2025). <em>Educational Digital Support Agents (DSA-E) for Teaching-Learning Support in Vocational Education.</em> AI Day 2025, University Bayreuth, 07.02., Bayreuth.
+            </li>
+          </ul>
+
+          <h3 class="tw-mt-8 tw-text-xl tw-font-semibold">2024</h3>
+          <ul class="tw-mt-3 tw-space-y-3">
+            <li class="pub-item" data-type="talk" data-year="2024" data-text="KI-Einsatz DSA-E Gesprächskreis Berufliche Bildung München">
+              <strong>Dier, M.</strong> (2024). <em>KI-Einsatz und Educational Digital Support Agents (DSA-E) an der Berufsschule.</em> Gesprächskreis Berufliche Bildung Bayern, 18.07., München.
+            </li>
+          </ul>
+
+          <h3 class="tw-mt-8 tw-text-xl tw-font-semibold">2023</h3>
+          <ul class="tw-mt-3 tw-space-y-3">
+            <li class="pub-item" data-type="talk" data-year="2023" data-text="Universität & Berufsschule QLB Abschlusskongress Berlin">
+              <strong>Dier, M.</strong> (2023). <em>Universität & Berufsschule: Das Universitätsschulkonzept Bayreuther Prägung.</em> QLB-Abschlusskongress, 05.–06.10., Berlin.
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2023" data-text="Subjektive Theorien KI-unterstützt QLB Abschlusskongress Berlin">
+              <strong>Dier, M.</strong> (2023). <em>Erfassung und Weiterentwicklung Subjektiver Theorien – KI-unterstützte Selbstreflexions- und Lernprozesse.</em> QLB-Abschlusskongress, 05.–06.10., Berlin.
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2023" data-text="KI Aktivierung Subjektiver Theorien Nürnberg">
+              <strong>Dier, M.</strong> (2023). <em>KI zur Aktivierung Subjektiver Theorien bei Lehramtsstudierenden.</em> Gesprächskreis Berufliche Bildung Bayern, 28.06., Nürnberg.
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2023" data-text="Symbiose Lehrkräftebildung Universität Bayern München">
+              <strong>Dier, M.</strong> (2023). <em>Universität & Berufsschule – Symbiose für Lehrkräftebildung.</em> Workshop „Praxisanteile in der Lehrkräftebildung“, Universität Bayern e. V., 13.02., München.
+            </li>
+          </ul>
+
+          <h3 class="tw-mt-8 tw-text-xl tw-font-semibold">2022</h3>
+          <ul class="tw-mt-3 tw-space-y-3">
+            <li class="pub-item" data-type="talk" data-year="2022" data-text="Projektarbeiten MS-Teams Digitale Schule Oberfranken Bayreuth">
+              <strong>Dier, M.</strong> (2022). <em>Projektarbeiten mit MS-Teams: kompetenzorientiert – situativ – aktiv.</em> Kongress Digitale Schule Oberfranken, 19.11., Bayreuth.
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2022" data-text="Subjektive Theorien KI-unterstützt Verbundkolloquium Paderborn">
+              <strong>Dier, M.</strong> (2022). <em>Erfassung und Weiterentwicklung Subjektiver Theorien – KI-unterstützte Selbstreflexions- und Lernprozesse.</em> Verbundkolloquium Berufs- und Wirtschaftspädagogik, 21.–22.03., Paderborn.
+            </li>
+          </ul>
+
+          <h3 class="tw-mt-8 tw-text-xl tw-font-semibold">2021</h3>
+          <ul class="tw-mt-3 tw-space-y-3">
+            <li class="pub-item" data-type="talk" data-year="2021" data-text="Universität und Berufsschule QLB Berlin">
+              <strong>Dier, M.</strong> (2021). <em>Universität und Berufsschule – KI-unterstützte Theorie-Praxis-Verzahnung an der Universitätsschule Bayreuth.</em> QLB-Programmkongress, 22.–23.11., Berlin (online).
+            </li>
+            <li class="pub-item" data-type="talk" data-year="2021" data-text="Subjektive Theorien KI-unterstützt QLB Workshop Osnabrück">
+              <strong>Dier, M.</strong> (2021). <em>Erfassung und Weiterentwicklung Subjektiver Theorien – KI-unterstützte Selbstreflexions- und Lernprozesse.</em> QLB-Workshop „Quo vadis Berufliche Lehrerbildung?“, 02.–03.03., Osnabrück (online).
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <hr class="tw-mt-6" />
+    <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-text-black max-md:tw-flex-col">
+      <div class="tw-flex tw-gap-6 tw-text-2xl">
+        <a href="https://moritzdier.github.io/lab/" aria-label="Github"><i class="bi bi-github"></i></a>
+        <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
+      </div>
+    </footer>
+
+    <!-- Filter Script -->
+    <script>
+      const typeButtons = document.querySelectorAll('#typeFilters button');
+      const yearSelect  = document.getElementById('yearFilter');
+      const searchInput = document.getElementById('searchInput');
+      const items       = Array.from(document.querySelectorAll('.pub-item'));
+      const yearGroups  = Array.from(document.querySelectorAll('.pub-year-group'));
+
+      function applyFilters() {
+        const activeType = document.querySelector('#typeFilters button.tw-bg-black')?.dataset.type || 'all';
+        const year = yearSelect.value;
+        const q = searchInput.value.trim().toLowerCase();
+
+        items.forEach(li => {
+          const
