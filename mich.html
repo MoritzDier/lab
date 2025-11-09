@@ -126,22 +126,19 @@
 <!-- Persönliches -->
 <h3 class="tw-mt-10 tw-text-2xl tw-font-semibold">Persönliches</h3>
 
-<div class="tw-flex tw-w-full tw-gap-6 tw-py-2 max-xl:tw-items-center max-lg:tw-flex-col">
-  <!-- BILD LINKS -->
-  <div class="tw-flex tw-w-full tw-max-w-[50%] tw-justify-center tw-items-center max-lg:tw-max-w-full">
-    <div class="tw-relative tw-flex tw-w-full tw-max-w-[650px] tw-min-w-[350px] tw-max-h-[520px]
-                max-lg:tw-w-[320px] max-lg:tw-min-w-[320px] max-lg:tw-max-h-[320px]">
-      <img
-        src="./assets/images/home/MDierBerg.jpeg"
-        alt="Dr. Moritz Dier beim Bergsteigen"
-        class="tw-w-full tw-h-auto tw-max-h-[500px] !tw-object-contain tw-rounded-xl tw-shadow-md"
-        loading="lazy" decoding="async"
-      />
-    </div>
+<div class="tw-flex tw-flex-col lg:tw-flex-row tw-gap-6 lg:tw-items-start">
+  <!-- Bild LINKS: mobil oben, keine feste Höhe -->
+  <div class="tw-w-full lg:tw-basis-1/2 lg:tw-shrink-0">
+    <img
+      src="./assets/images/home/MDierBerg.jpeg"
+      alt="Dr. Moritz Dier beim Bergsteigen"
+      class="!tw-block !tw-w-full !tw-h-auto tw-object-contain tw-rounded-xl tw-shadow-md lg:tw-max-h-[520px]"
+      loading="lazy" decoding="async"
+    />
   </div>
 
-  <!-- TEXT RECHTS -->
-  <div class="tw-flex tw-flex-col tw-justify-center tw-max-w-[640px] max-lg:tw-w-full">
+  <!-- Text RECHTS -->
+  <div class="tw-w-full lg:tw-basis-1/2">
     <p class="tw-text-justify tw-text-lg">
       Wenn ich nicht gerade Bildungskonzepte entwerfe oder den KI-Einsatz teste, zieht es mich hinauf in die Berge.
       Dort finde ich nicht nur Ausgleich und Stille, sondern auch eine wohltuende Distanz zum drängenden Alltag.
