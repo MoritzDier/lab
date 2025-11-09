@@ -126,17 +126,22 @@
 
 <!-- Persönliches -->
 <h3 class="tw-mt-10 tw-text-2xl tw-font-semibold">Persönliches</h3>
-<div class="tw-flex tw-items-stretch tw-justify-between tw-gap-6 tw-flex-nowrap max-lg:tw-flex-wrap">
+
+<!-- mobil: Spalte; ab lg: Reihe -->
+<div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-start tw-gap-6">
   
-  <div class="reveal-hero-text tw-flex-[0_0_40%] tw-rounded-lg tw-shadow-md tw-overflow-hidden tw-mt-4 max-lg:tw-w-full">
+  <!-- Bild: mobil 100%, ab lg 40% -->
+  <div class="reveal-hero-text tw-w-full lg:tw-w-[40%] lg:tw-shrink-0">
     <img 
       src="./assets/images/home/MDierBerg.jpeg" 
       alt="Dr. Moritz Dier beim Bergsteigen"
-      class="tw-w-full tw-h-full tw-object-cover"
+      class="tw-w-full tw-h-auto tw-rounded-lg tw-shadow-md"
     />
   </div>
-  
-  <p class="reveal-hero-text tw-text-justify tw-text-lg tw-flex-[1_1_60%]">
+
+  <!-- Text: mobil 100%, ab lg 60% -->
+  <div class="reveal-hero-text tw-w-full lg:tw-w-[60%]">
+    <p class="tw-text-justify tw-text-lg">
     Wenn ich nicht gerade Bildungskonzepte entwerfe oder den KI-Einsatz teste, zieht es mich hinauf in die Berge.
 Dort finde ich nicht nur Ausgleich und Stille, sondern auch eine wohltuende Distanz zum drängenden Alltag.
 In klarer Luft und vor gewaltiger Kulisse beginnen sich Gedanken neu zu sortieren. Viele Ideen, die später ihren Weg in meine Arbeit finden,
