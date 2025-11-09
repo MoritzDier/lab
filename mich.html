@@ -127,12 +127,11 @@
 <!-- Persönliches -->
 <h3 class="tw-mt-10 tw-text-2xl tw-font-semibold">Persönliches</h3>
 
-<!-- mobil: Spalte; ab lg: Reihe -->
-<h3 class="tw-mt-10 tw-text-2xl tw-font-semibold">Persönliches</h3>
+<!-- mobil: Spalte, desktop: Reihe mit equal-height -->
+<div class="tw-flex tw-flex-col lg:tw-flex-row lg:tw-items-stretch tw-gap-6">
 
-<div class="tw-flex tw-flex-col lg:tw-flex-row tw-gap-6">
-  <!-- Bild: mobil vollbreit, Desktop fix hohe Kachel -->
-  <div class="reveal-hero-text tw-w-full lg:tw-w-[40%] lg:tw-h-64 xl:tw-h-72 2xl:tw-h-80 lg:tw-overflow-hidden tw-rounded-lg tw-shadow-md">
+  <!-- Bild-Wrapper: füllt die Höhe der Zeile (wie der Text) -->
+  <div class="reveal-hero-text tw-w-full lg:tw-w-[40%] lg:tw-min-h-0 tw-rounded-lg tw-shadow-md tw-overflow-hidden">
     <img
       src="./assets/images/home/MDierBerg.jpeg"
       alt="Dr. Moritz Dier beim Bergsteigen"
@@ -141,7 +140,7 @@
     />
   </div>
 
-  <!-- Text: mobil vollbreit, Desktop 60% -->
+  <!-- Text-Spalte: bestimmt die Zeilenhöhe -->
   <div class="reveal-hero-text tw-w-full lg:tw-w-[60%]">
     <p class="tw-text-justify tw-text-lg">
       Wenn ich nicht gerade Bildungskonzepte entwerfe oder den KI-Einsatz teste, zieht es mich hinauf in die Berge.
