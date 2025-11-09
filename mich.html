@@ -127,21 +127,19 @@
 <!-- Persönliches -->
 <h3 class="tw-mt-10 tw-text-2xl tw-font-semibold">Persönliches</h3>
 
-<!-- mobil: Spalte, desktop: Reihe mit equal-height -->
-<div class="tw-flex tw-flex-col lg:tw-flex-row lg:tw-items-stretch tw-gap-6">
-
-  <!-- Bild-Wrapper: füllt die Höhe der Zeile (wie der Text) -->
-  <div class="reveal-hero-text tw-w-full lg:tw-w-[40%] lg:tw-min-h-0 tw-rounded-lg tw-shadow-md tw-overflow-hidden">
+<div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-5 tw-gap-6 tw-items-start">
+  <!-- Bild: mobil oben, desktop links; Höhe auf Desktop begrenzt -->
+  <figure class="reveal-hero-text lg:tw-col-span-2 tw-w-full">
     <img
       src="./assets/images/home/MDierBerg.jpeg"
       alt="Dr. Moritz Dier beim Bergsteigen"
-      class="tw-w-full tw-h-auto lg:tw-h-full lg:tw-object-cover lg:tw-object-[50%_35%]"
+      class="tw-w-full tw-h-auto lg:tw-h-[clamp(14rem,28vh,22rem)] lg:tw-w-full lg:tw-object-cover lg:tw-object-[50%_35%] tw-rounded-lg tw-shadow-md"
       loading="lazy" decoding="async"
     />
-  </div>
+  </figure>
 
-  <!-- Text-Spalte: bestimmt die Zeilenhöhe -->
-  <div class="reveal-hero-text tw-w-full lg:tw-w-[60%]">
+  <!-- Text -->
+  <div class="reveal-hero-text lg:tw-col-span-3">
     <p class="tw-text-justify tw-text-lg">
       Wenn ich nicht gerade Bildungskonzepte entwerfe oder den KI-Einsatz teste, zieht es mich hinauf in die Berge.
       Dort finde ich nicht nur Ausgleich und Stille, sondern auch eine wohltuende Distanz zum drängenden Alltag.
