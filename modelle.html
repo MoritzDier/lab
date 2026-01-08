@@ -17,212 +17,105 @@
     <link rel="stylesheet" href="./css/tailwind-build.css">
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous" />
   </head>
 
-  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-font-mono">
 
     <!-- Header -->
-    <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
+    <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
       <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="https://moritzdier.github.io/lab/">Wissenschaft & Praxis</a>
       <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
-        <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+        <div class="tw-flex tw-h-full tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col lg:tw-items-center">
           <a class="header-links" href="modelle.html">Modelle & Konzepte</a>
           <a class="header-links" href="forschung.html">Forschung</a>
           <a class="header-links" href="lehre.html">Lehre</a>
           <a class="header-links" href="publikationen.html">Publikationen</a>
           <a class="header-links" href="mich.html">Über mich</a>
         </div>
-        <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
-          <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="Kontakt" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
-            <span>Kontakt</span>
-            <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
-              <i class="bi bi-arrow-up-right"></i>
-            </div>
+        <div class="tw-ml-4">
+          <a href="mailto:Moritz.Dier@uni-bayreuth.de"
+             class="tw-flex tw-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-4 tw-py-2 tw-text-white">
+            Kontakt <i class="bi bi-arrow-up-right"></i>
           </a>
         </div>
       </div>
-      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-text-3xl lg:tw-hidden"
+              onclick="toggleHeader()"></button>
     </header>
 
     <!-- Modelle & Konzepte -->
-    <section class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-overflow-hidden tw-p-[5%] max-lg:tw-p-4 max-md:tw-mt-[50px]">
-      <div class="tw-flex tw-flex-col tw-space-y-6 tw-max-w-[800px]">
+    <section class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-p-[5%] max-lg:tw-p-4 max-md:tw-mt-[50px]">
+      <div class="tw-flex tw-max-w-[800px] tw-flex-col tw-space-y-6">
 
         <a href="https://moritzdier.github.io/lab/"
            class="tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-text-gray-600 hover:tw-underline">
           <i class="bi bi-arrow-left"></i> Zurück zu Startseite
         </a>
 
-        <h1 class="tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug">
-          <span class="tw-p-1 tw-px-6" style="background-color: #34d399;">Modelle & Konzepte</span><br />
-          <span class="reveal-hero-text tw-text-gray-600">Theoretisch Fundiert - praktisch tauglich</span>
+        <h1 class="tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl">
+          <span class="tw-px-6 tw-py-1" style="background-color:#34d399;">Modelle & Konzepte</span><br />
+          <span class="tw-text-gray-600">Theoretisch fundiert – praktisch tauglich</span>
         </h1>
 
-        <p class="reveal-hero-text tw-mt-4 tw-text-justify tw-text-lg tw-leading-7">
-          Auf dieser Seite stelle ich ausgewählte Modelle und Konzepte vor, die ich im Rahmen meiner Forschungs-, Entwicklungs- und Lehrtätigkeit eigenständig
-          oder in Kooperation entwickelt habe bzw. derzeit weiterentwickle. Sie adressieren zentrale Fragestellungen der Berufs- und Technikdidaktik und dienen
-          sowohl der theoretischen Fundierung als auch der praktischen Anwendung.
+        <p class="tw-text-justify tw-text-lg tw-leading-7">
+          Auf dieser Seite stelle ich ausgewählte Modelle und Konzepte vor, die ich im Rahmen meiner Forschungs-,
+          Entwicklungs- und Lehrtätigkeit eigenständig oder in Kooperation entwickelt habe bzw. derzeit weiterentwickle.
         </p>
 
-        <!-- Modell 1 (Card) -->
-        <div class="tw-mt-12 tw-rounded-2xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-sm tw-p-6 md:tw-p-8 tw-space-y-6">
+        <!-- Modell 1 -->
+        <div class="tw-mt-20 tw-rounded-2xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 md:tw-p-8 tw-shadow-sm">
 
-              <h2 class="tw-text-2xl tw-font-semibold">
-              <span class="tw-px-2 tw-py-1" style="background-color: #34d399;">
+          <h2 class="tw--ml-6 md:tw--ml-8 tw-mt-4 tw-text-2xl tw-font-semibold">
+            <span class="tw-px-2 tw-py-1" style="background-color:#34d399;">
               Die KI-souveräne berufspädagogisch-didaktische Könnerschaft
-              </span>
-              </h2>
+            </span>
+          </h2>
 
-              <p class="tw-font-semibold tw-text-gray-700 tw-mt-2">
-              Ein Kompetenzmodell über das professionelle Handeln von Lehrkräften an beruflichen Schulen in der KI-Ära
-              </p>
-            </div>
-          </div>
-
-          <p class="tw-text-justify tw-text-lg tw-leading-7">
-            Das Modell der KI-souveränen berufspädagogisch-didaktischen Könnerschaft beschreibt das
-            professionelle Handeln von Lehrkräften an beruflichen Schulen unter den Bedingungen der
-            KI-Ära. Es geht davon aus, dass professionelle Könnerschaft nicht aus einzelnen Kompetenzen
-            resultiert, sondern aus der wechselseitigen Verschränkung von Wissen, Können und Wollen
-            in den Handlungsbereichen Pädagogik, Didaktik und Beruf.
+          <p class="tw-mt-4 tw-font-semibold tw-text-gray-700">
+            Ein Kompetenzmodell über das professionelle Handeln von Lehrkräften an beruflichen Schulen in der KI-Ära
           </p>
 
-          <div class="tw-flex tw-flex-col tw-items-start tw-gap-10 tw-mt-2">
-            <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-              <img
-                src="./assets/images/home/KI-bpd-K.jpg"
-                alt="KI-souveräne berufspädagogisch-didaktische Könnerschaft"
-                class="tw-h-auto tw-object-contain tw-rounded-xl tw-shadow-md"
-                style="max-width: 600px; width: 100%;" />
-            </div>
+          <p class="tw-mt-4 tw-text-justify tw-text-lg tw-leading-7">
+            Das Modell der KI-souveränen berufspädagogisch-didaktischen Könnerschaft beschreibt das professionelle
+            Handeln von Lehrkräften an beruflichen Schulen unter den Bedingungen der KI-Ära.
+          </p>
+
+          <div class="tw-mt-6 tw-flex tw-justify-center">
+            <img src="./assets/images/home/KI-bpd-K.jpg"
+                 alt="KI-souveräne berufspädagogisch-didaktische Könnerschaft"
+                 class="tw-rounded-xl tw-shadow-md"
+                 style="max-width:600px;width:100%;" />
           </div>
 
-          <!-- Kurzüberblick (mit Icons) -->
-          <div class="tw-mt-4 tw-w-full tw-space-y-6">
-
-            <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-5">
-
-              <div class="tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
-                <div class="tw-flex tw-items-start tw-gap-3">
-                  <div class="tw-mt-1 tw-flex tw-h-9 tw-w-9 tw-items-center tw-justify-center tw-rounded-full tw-bg-gray-100">
-                    <i class="bi bi-arrow-left-right tw-text-lg"></i>
-                  </div>
-                  <div class="tw-flex-1">
-                    <h4 class="tw-text-base tw-font-semibold">Leitlogik: mutualistische Symbiose</h4>
-                    <p class="tw-mt-2 tw-text-justify tw-text-sm tw-leading-6">
-                      Könnerschaft wird als spezifische Form professioneller Handlungskompetenz verstanden, die sich durch
-                      hohe Situativität, intuitive Flexibilität sowie eine zugleich wissenschaftlich fundierte und wertorientierte
-                      Handlungssicherheit auszeichnet. Zentrale Leitidee ist die mutualistische Symbiose von Wissen, Können
-                      und Wollen aus den verschiedenen Bereichen.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
-                <div class="tw-flex tw-items-start tw-gap-3">
-                  <div class="tw-mt-1 tw-flex tw-h-9 tw-w-9 tw-items-center tw-justify-center tw-rounded-full tw-bg-gray-100">
-                    <i class="bi bi-stack tw-text-lg"></i>
-                  </div>
-                  <div class="tw-flex-1">
-                    <h4 class="tw-text-base tw-font-semibold">Kompetenzdimensionen</h4>
-                    <ul class="tw-mt-2 tw-space-y-1 tw-text-sm tw-leading-6">
-                      <li><span class="tw-font-semibold">Wissen</span> – Orientierung, Begründung, Reflexion</li>
-                      <li><span class="tw-font-semibold">Können</span> – situatives, routiniertes und intuitives Umsetzen</li>
-                      <li><span class="tw-font-semibold">Wollen</span> – Haltung, Wertebasis, Verantwortungsübernahme</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
-                <div class="tw-flex tw-items-start tw-gap-3">
-                  <div class="tw-mt-1 tw-flex tw-h-9 tw-w-9 tw-items-center tw-justify-center tw-rounded-full tw-bg-gray-100">
-                    <i class="bi bi-compass tw-text-lg"></i>
-                  </div>
-                  <div class="tw-flex-1">
-                    <h4 class="tw-text-base tw-font-semibold">Handlungsbereiche</h4>
-                    <ul class="tw-mt-2 tw-space-y-1 tw-text-sm tw-leading-6">
-                      <li><span class="tw-font-semibold">Pädagogik</span> – Fokus auf die Definition des Bildungsauftrags</li>
-                      <li><span class="tw-font-semibold">Didaktik</span> – Fokus auf die Umsetzung des Bildungsauftrags</li>
-                      <li><span class="tw-font-semibold">Beruf</span> – Fokus auf Bildungsgang, Beruf sowie Geschäfts- und Arbeitsprozesse</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
-                <div class="tw-flex tw-items-start tw-gap-3">
-                  <div class="tw-mt-1 tw-flex tw-h-9 tw-w-9 tw-items-center tw-justify-center tw-rounded-full tw-bg-gray-100">
-                    <i class="bi bi-cpu tw-text-lg"></i>
-                  </div>
-                  <div class="tw-flex-1">
-                    <h4 class="tw-text-base tw-font-semibold">KI-Souveränität</h4>
-                    <p class="tw-mt-2 tw-text-justify tw-text-sm tw-leading-6">
-                      KI-Souveränität befähigt Lehrkräfte, KI reflektiert, selbstbestimmt und verantwortungsvoll in
-                      pädagogischen, didaktischen und beruflichen Kontexten zu nutzen. KI wird nicht nur als Werkzeug,
-                      sondern als kognitiv-interaktiver Partner verstanden, der Denk- und Entscheidungsprozesse erweitert,
-                      ohne die menschliche Entscheidungshoheit zu ersetzen.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
-              <div class="tw-flex tw-items-start tw-gap-3">
-                <div class="tw-mt-1 tw-flex tw-h-9 tw-w-9 tw-items-center tw-justify-center tw-rounded-full tw-bg-gray-100">
-                  <i class="bi bi-buildings tw-text-lg"></i>
-                </div>
-                <div class="tw-flex-1">
-                  <h4 class="tw-text-base tw-font-semibold">Einbettung: Schule als lernendes System</h4>
-                  <p class="tw-mt-2 tw-text-justify tw-text-sm tw-leading-6">
-                    Professionelles Handeln entfaltet sich nicht isoliert, sondern in Wechselwirkung mit kollegialer Kooperation,
-                    organisationalen Strukturen und schulischen Entwicklungsprozessen. Das Modell überwindet damit bewusst
-                    die Theorie-Praxis-Dichotomie und verbindet Professionalität und KI-Integration zu einem
-                    kohärenten professionellen Rahmen.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="tw-flex tw-flex-wrap tw-items-center tw-gap-4">
-              <a href="./assets/docs/KI-souveraene-berufspaedagogisch-didaktische-Koennerschaft.pdf"
-                 class="tw-inline-flex tw-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-6 tw-py-3 tw-text-sm tw-font-medium tw-text-white hover:tw-bg-gray-800">
-                <i class="bi bi-file-earmark-text"></i>
-                Ausführliche Darstellung (PDF)
-              </a>
-            </div>
-
+          <div class="tw-mt-6 tw-flex">
+            <a href="./assets/docs/KI-souveraene-berufspaedagogisch-didaktische-Koennerschaft.pdf"
+               class="tw-rounded-full tw-bg-black tw-px-6 tw-py-3 tw-text-sm tw-font-medium tw-text-white hover:tw-bg-gray-800">
+              <i class="bi bi-file-earmark-text"></i> Ausführliche Darstellung (PDF)
+            </a>
           </div>
 
         </div>
 
-        <!-- Modell 2 (Card) -->
-        <div class="tw-mt-16 tw-rounded-2xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-sm tw-p-6 md:tw-p-8 tw-space-y-4">
+        <!-- Modell 2 -->
+        <div class="tw-mt-24 tw-rounded-2xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 md:tw-p-8 tw-shadow-sm">
 
-  
-              <h2 class="tw-text-2xl tw-font-semibold" >
-                <span class="tw-px-2 tw-py-1" style="background-color: #34d399;">
-                Der pädagogisch-didaktische Orientierungsraum für Unterricht
-              </h2>
-          </div>
+          <h2 class="tw--ml-6 md:tw--ml-8 tw-mt-4 tw-text-2xl tw-font-semibold">
+            <span class="tw-px-2 tw-py-1" style="background-color:#34d399;">
+              Der pädagogisch-didaktische Orientierungsraum für Unterricht
+            </span>
+          </h2>
 
-          <p class="tw-text-justify tw-text-lg tw-leading-7">
-            Beispielsweise habe ich an der gewerblich-technischen Universitätsberufsschule
-            gemeinsam mit Manfred Müller einen pädagogisch-didaktischen Orientierungsraum für den Unterricht entwickelt:
+          <p class="tw-mt-4 tw-text-justify tw-text-lg tw-leading-7">
+            Beispielsweise habe ich an der gewerblich-technischen Universitätsberufsschule gemeinsam mit
+            Manfred Müller einen pädagogisch-didaktischen Orientierungsraum für den Unterricht entwickelt.
           </p>
 
-          <div class="tw-flex tw-flex-col tw-items-start tw-gap-10 tw-mt-2">
-            <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-              <img
-                src="./assets/images/home/ORaum.jpg"
-                alt="pädagogisch-didaktischer Orientierungsraum für Unterricht"
-                class="tw-h-auto tw-object-contain tw-rounded-xl tw-shadow-md"
-                style="max-width: 600px; width: 100%;" />
-            </div>
+          <div class="tw-mt-6 tw-flex tw-justify-center">
+            <img src="./assets/images/home/ORaum.jpg"
+                 alt="pädagogisch-didaktischer Orientierungsraum für Unterricht"
+                 class="tw-rounded-xl tw-shadow-md"
+                 style="max-width:600px;width:100%;" />
           </div>
 
         </div>
@@ -231,17 +124,16 @@
     </section>
 
     <!-- Footer -->
-    <hr class="tw-mt-4" />
-    <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
+    <hr class="tw-mt-6" />
+    <footer class="tw-flex tw-items-center tw-justify-around tw-py-8">
       <div class="tw-flex tw-gap-6 tw-text-2xl">
-        <a href="https://moritzdier.github.io/lab/" aria-label="Github"><i class="bi bi-github"></i></a>
-        <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
+        <a href="https://moritzdier.github.io/lab/"><i class="bi bi-github"></i></a>
+        <a href="mailto:Moritz.Dier@uni-bayreuth.de"><i class="bi bi-envelope"></i></a>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
