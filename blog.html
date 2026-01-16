@@ -49,10 +49,8 @@
       <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
     </header>
 
-
- <section
-      class="tw-relative tw-flex tw-w-full tw-flex-col tw-overflow-hidden tw-p-[5%] max-lg:tw-p-4 tw-pt-[80px]"
-    >
+    <!-- Hero: weniger Padding unten, Top-Padding reduziert -->
+    <section class="tw-relative tw-flex tw-w-full tw-flex-col tw-overflow-hidden tw-px-[5%] tw-pt-[64px] tw-pb-2 max-lg:tw-px-4">
       <div class="tw-flex tw-flex-col tw-space-y-6 tw-max-w-[800px]">
         <a
           href="https://moritzdier.github.io/lab/"
@@ -68,20 +66,19 @@
       </div>
     </section>
 
-    <!-- Blog-Hero (direkt unter dem oberen Hero; kein zusätzlicher Abstand) -->
-    <section class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-flex-col tw-overflow-hidden tw-p-[5%] max-lg:tw-p-4">
-      <div class="tw-flex tw-flex-col tw-space-y-6 tw-max-w-[800px]">
+    <!-- Blog-Hero: min-h entfernt + fast kein Padding oben -->
+    <section class="tw-relative tw-flex tw-w-full tw-flex-col tw-overflow-hidden tw-px-[5%] tw-pt-0 tw-pb-2 max-lg:tw-px-4">
+      <div class="tw-flex tw-flex-col tw-space-y-2 tw-max-w-[800px]">
         <!-- optionaler Inhalt -->
       </div>
     </section>
 
-    <!-- Blog -->
+    <!-- Blog: mt reduziert -->
     <section
       id="blog"
-      class="tw-relative tw-flex tw-min-h-[20vh] tw-w-full tw-flex-col tw-items-center tw-overflow-hidden tw-px-6 tw-py-10"
+      class="tw-relative tw-flex tw-min-h-[20vh] tw-w-full tw-flex-col tw-items-center tw-overflow-hidden tw-px-6 tw-py-6"
     >
-    
-      <div class="tw-mt-10 tw-flex tw-flex-wrap tw-justify-center tw-gap-8">
+      <div class="tw-mt-4 tw-flex tw-flex-wrap tw-justify-center tw-gap-8">
         <a
           href="./blog/blog-eintrag-1.html"
           class="tw-w-[260px] tw-rounded-lg tw-bg-white tw-shadow-md tw-flex tw-flex-col tw-overflow-hidden tw-transition-colors hover:tw-bg-black hover:tw-text-white"
@@ -96,8 +93,6 @@
       </div>
     </section>
 
-
-    
     <!-- Footer -->
     <hr class="tw-mt-4" />
     <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
