@@ -1,1 +1,270 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Dr. Moritz Dier | Blog – Bildungsauftrag der Berufsschule</title>
+    <meta
+      name="description"
+      content="Der Bildungsauftrag der Berufsschule: Warum reine Ausbildung für den Beruf zu kurz greift – und was das Zielbild der gebildeten Fachkraft für Unterricht konkret bedeutet."
+    />
+
+    <link rel="icon" type="image/png" href="https://moritzdier.github.io/lab/assets/logoN.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Der Bildungsauftrag der Berufsschule – Blog | Dr. Moritz Dier" />
+    <meta property="og:description" content="Warum „Ausbildung für den Beruf“ zu kurz greift – und was das Zielbild der gebildeten Fachkraft für Unterricht bedeutet." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://moritzdier.github.io/lab/blog/blog-bildungsauftrag-berufsschule.html" />
+    <meta property="og:image" content="https://moritzdier.github.io/lab/assets/images/home/design.jpg" />
+
+    <!-- Styles (aus /blog relativ) -->
+    <link rel="stylesheet" href="../css/tailwind-build.css">
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+
+    <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
+      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="https://moritzdier.github.io/lab/">Wissenschaft &amp; Praxis</a>
+      <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+        <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+          <a class="header-links" href="../modelle.html">Modelle &amp; Konzepte</a>
+          <a class="header-links" href="../forschung.html">Forschung</a>
+          <a class="header-links" href="../lehre.html">Lehre</a>
+          <a class="header-links" href="../publikationen.html">Publikationen</a>
+          <a class="header-links" href="../blog.html">Blog</a>
+          <a class="header-links" href="../mich.html">Über mich</a>
+        </div>
+        <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
+          <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="Kontakt" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
+            <span>Kontakt</span>
+            <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header>
+
+    <!-- Blog-Hero -->
+    <section class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-flex-col tw-overflow-hidden tw-p-[5%] max-lg:tw-p-4 max-md:tw-mt-[50px]">
+      <div class="tw-flex tw-flex-col tw-space-y-6 tw-max-w-[900px]">
+        <a href="https://moritzdier.github.io/lab/"
+          class="tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-text-gray-600 hover:tw-underline">
+          <i class="bi bi-arrow-left"></i> Zurück zu Startseite
+        </a>
+
+        <h1 class="tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug">
+          <span class="tw-p-1 tw-px-6" style="background-color: #fbbf24;">Blog-Beitrag</span><br />
+          <span class="reveal-hero-text tw-text-gray-600">Der Bildungsauftrag der Berufsschule</span>
+        </h1>
+
+        <p class="reveal-hero-text tw-mt-4 tw-text-justify tw-text-lg">
+          Warum „Ausbildung für den Beruf“ zu kurz greift – und was das Zielbild der <span class="tw-font-semibold">gebildeten Fachkraft</span> konkret für Unterricht bedeutet.
+        </p>
+      </div>
+
+      <div class="tw-flex tw-flex-col tw-gap-2 tw-mt-2">
+        <div class="tw-flex tw-items-center tw-gap-3">
+          <time class="tw-text-sm tw-text-gray-600" datetime="2026-01-30">30.01.2025</time>
+          <span class="tw-text-sm tw-text-gray-600">• Lesedauer: 7 Min</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artikel-Körper -->
+    <main lang="de" class="tw-relative tw-w-full tw-px-[5%] tw-py-8 max-lg:tw-px-4">
+      <article class="tw-max-w-3xl tw-mx-auto tw-text-justify tw-leading-8 tw-text-gray-800">
+
+        <p class="tw-mb-6"><strong>
+          Lehrpläne, Rahmenrichtlinien und -vereinbarungen sind nicht nur Verwaltungstexte. Sie legen fest, wofür Berufsschule da ist – und damit auch, woran Unterricht sich messen lassen muss.
+          Wer Unterricht plant, durchführt und reflektiert, kommt um eine saubere Analyse des Bildungsauftrags nicht herum.
+          Denn dieser Bildungsauftrag ist anspruchsvoller als „fit für den Beruf“.
+        </strong></p>
+
+        <h2 class="tw-mt-8 tw-mb-3 tw-text-2xl tw-font-semibold">1) Was der Bildungsauftrag tatsächlich verlangt</h2>
+        <p class="tw-mb-6">
+          In den formalen Vorgaben wird deutlich: Berufsschule soll nicht nur berufsbezogene Kompetenzentwicklung ermöglichen, sondern Lernende zugleich zur Mitgestaltung von Arbeitswelt und Gesellschaft befähigen –
+          unter sozialer, ökonomischer und ökologischer Verantwortung. In den bayerischen Lehrplänen wird dieser Anspruch weiter zugespitzt:
+          Berufsfähigkeit meint dort explizit eine Verbindung aus <strong>Fachkompetenz</strong> und <strong>humanen bzw. sozialen Fähigkeiten</strong>
+          sowie die Förderung verantwortungsbewussten Handelns in Lebensgestaltung und Öffentlichkeit.
+        </p>
+
+        <p class="tw-mb-6">
+          Wenn man diese Aussagen ernst nimmt, ist die Konsequenz eindeutig: Der Maßstab ist nicht die zweckrationale „Ausbildung für den Beruf“, sondern
+          <strong>Bildung im Beruf</strong>. Lernende sollen befähigt werden, berufliche, private und gesellschaftliche Herausforderungen
+          sachgerecht, kritisch und selbstreflexiv zu bearbeiten – und Verantwortung zu übernehmen.
+        </p>
+
+        <!-- Zielbild – farblich abgesetzter Abschnitt -->
+        <section
+          class="tw-mt-6 tw-mb-10 tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-100 tw-shadow-inner tw-p-6 md:tw-p-8"
+          style="background-color:#f1f5f9"
+          role="region" aria-labelledby="zielbild-heading">
+
+          <h2 id="zielbild-heading" class="tw-text-2xl tw-font-semibold tw-tracking-tight">Didaktisches Zielbild</h2>
+
+          <blockquote class="tw-mt-6 tw-rounded-xl tw-border-l-4 tw-border-indigo-500 tw-bg-indigo-50 tw-p-5 tw-text-base tw-italic">
+            <p class="tw-mb-0">
+              Ziel berufsschulischen Unterrichts ist nicht nur das „Funktionieren im Betrieb“, sondern die Entwicklung einer
+              <strong class="tw-not-italic">gebildeten Fachkraft</strong>:
+              fachlich kompetent, urteilsfähig, verantwortungsbereit – und fähig zur reflektierten Teilhabe in Arbeitswelt und Gesellschaft.
+            </p>
+          </blockquote>
+        </section>
+
+        <h2 class="tw-mt-8 tw-mb-3 tw-text-2xl tw-font-semibold">2) Was eine „gebildete Fachkraft“ determiniert</h2>
+        <p class="tw-mb-6">
+          Der Begriff wirkt schnell wie ein idealistisches Etikett. Er wird aber konkret, sobald man zwei Fragen sauber trennt – und anschließend wieder zusammenführt:
+          <strong>Was bedeutet Bildung?</strong> und <strong>was bedeutet Fachkraftsein?</strong>
+        </p>
+
+        <h3 class="tw-mt-8 tw-mb-3 tw-text-xl tw-font-semibold">Bildung: nicht Wissen <span aria-hidden="true">oder</span> Persönlichkeit – sondern beides</h3>
+        <p class="tw-mb-6">
+          Bildungstheoretisch lassen sich zwei klassische Akzentuierungen unterscheiden: <strong>materiale Bildung</strong> (Wissen/Inhalte)
+          und <strong>formale Bildung</strong> (geistige Fähigkeiten wie Urteilskraft, Autonomie, Selbstreflexion, Kritikfähigkeit).
+          Eine einseitige Sicht ist nicht tragfähig:
+          Fähigkeiten entstehen nicht im luftleeren Raum, sondern <em>an</em> Inhalten – und Inhalte werden erst bildungswirksam, wenn sie
+          kontextualisiert, referenziert und kritisch geprüft werden.
+        </p>
+
+        <p class="tw-mb-6">
+          Daraus folgt: Berufliches Lehren und Lernen kann nicht nur der ökonomischen Verwertbarkeit dienen, sondern muss zugleich Entwicklungsräume eröffnen –
+          für Perspektivwechsel, reflexives Einnehmen anderer Standpunkte und die Integration neuer Einsichten in ein vernetztes Wissens- und Könnensgefüge.
+          Bildung ist damit immer auch Selbstbildung.
+        </p>
+
+        <div class="tw-mt-6 tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-white tw-shadow-sm tw-p-6 md:tw-p-8">
+          <h3 class="tw-text-xl tw-font-semibold tw-tracking-tight">Arbeitsdefinition „gebildet sein“</h3>
+          <ul class="tw-mt-4 tw-pl-6 tw-list-disc marker:tw-text-gray-500 tw-space-y-2">
+            <li><strong>Selbstbewusstsein:</strong> Sich als Mittelpunkt der eigenen Wahrnehmung verstehen – bei gleichzeitiger Anerkennung anderer Perspektiven.</li>
+            <li><strong>Perspektivübernahme:</strong> Ehrliches Interesse am Anderen und Bereitschaft, den eigenen Blick reflexiv zu erweitern.</li>
+            <li><strong>Wissen &amp; Können:</strong> Strukturiertes, vernetztes fachliches Wissen und Können besitzen und beherrschen.</li>
+            <li><strong>Weiterentwicklung:</strong> Neues Wissen willentlich integrieren und das eigene Kompetenzgefüge ausbauen.</li>
+            <li><strong>Identität &amp; Rolle:</strong> Rollen angemessen übernehmen können, ohne Willfährigkeit – mit kritischer Distanz.</li>
+          </ul>
+        </div>
+
+        <h3 class="tw-mt-10 tw-mb-3 tw-text-xl tw-font-semibold">Fachkraft: Handlungskompetenz ist mehr als Können</h3>
+        <p class="tw-mb-6">
+          Fachkraftsein wird häufig auf „fachlich richtig ausführen“ reduziert. Tragfähiger ist der Fokus auf
+          <strong>berufliche Handlungskompetenz</strong>: Probleme selbstständig lösen, Lösungen umsetzen, Prozesse und Ergebnisse prüfen und verantworten.
+          Entscheidend ist dabei: Wissen und Können sind notwendig, aber allein nicht hinreichend.
+        </p>
+
+        <div class="tw-mt-6 tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-6 md:tw-p-8">
+          <h3 class="tw-text-xl tw-font-semibold tw-tracking-tight">Drei Dimensionen beruflichen Handelns</h3>
+          <dl class="tw-mt-4 tw-grid tw-gap-6">
+            <div class="tw-flex tw-items-start tw-gap-3">
+              <i class="bi bi-journal-text tw-text-indigo-600 tw-mt-1" aria-hidden="true"></i>
+              <div>
+                <dt class="tw-text-base tw-font-semibold">Wissen</dt>
+                <dd class="tw-mt-1 tw-text-gray-800">Erzeugt Orientierung: Was gilt? Warum gilt es? Welche Begründungen tragen?...</dd>
+              </div>
+            </div>
+
+            <div class="tw-flex tw-items-start tw-gap-3">
+              <i class="bi bi-tools tw-text-amber-600 tw-mt-1" aria-hidden="true"></i>
+              <div>
+                <dt class="tw-text-base tw-font-semibold">Können</dt>
+                <dd class="tw-mt-1 tw-text-gray-800">Zeigt sich in der Umsetzung: Wie wird gehandelt? Wie wird Qualität gesichert?...</dd>
+              </div>
+            </div>
+
+            <div class="tw-flex tw-items-start tw-gap-3">
+              <i class="bi bi-compass tw-text-emerald-600 tw-mt-1" aria-hidden="true"></i>
+              <div>
+                <dt class="tw-text-base tw-font-semibold">Wollen</dt>
+                <dd class="tw-mt-1 tw-text-gray-800">
+                  Zeigt die Haltung und den Wertebezug, Motivation, Interesse und Verantwortungsbereitschaft als Voraussetzung, Wissen und Können überhaupt weiterzuentwickeln und zu verantworten.
+                </dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+
+        <p class="tw-mt-6 tw-mb-6">
+          Ergänzend lässt sich Handlungskompetenz in drei Bereichen fassen: <strong>Selbstkompetenz</strong> (für sich selbst verantwortlich handeln),
+          <strong>Sachkompetenz</strong> (urteils- und handlungsfähig in fachlichen Bereichen) und <strong>Sozialkompetenz</strong>
+          (urteils- und handlungsfähig in sozialen/gesellschaftlichen Kontexten). Damit ist klar: „Fachkraft“ ist nicht gleich „Fachlichkeit“.
+        </p>
+
+        <blockquote class="tw-mt-8 tw-rounded-xl tw-border-l-4 tw-border-amber-500 tw-bg-amber-50 tw-p-5 tw-text-base tw-italic">
+          <h3 class="tw-mb-2 tw-text-xl tw-font-semibold tw-not-italic">Merksatz</h3>
+          <p class="tw-mb-0">
+            <span class="tw-inline tw-px-2 tw-py-1" style="background-color:#fbbf24;">
+              Fachkraft sein heißt: fachlich, sozial und personal begründet Verantwortung übernehmen – und das auch wollen.
+            </span>
+          </p>
+        </blockquote>
+
+        <h2 class="tw-mt-10 tw-mb-3 tw-text-2xl tw-font-semibold">3) Was das für Unterricht bedeutet</h2>
+        <p class="tw-mb-6">
+          Wenn der Bildungsauftrag auf die gebildete Fachkraft zielt, dann reicht Unterricht nicht, der Inhalte lediglich erklärt und abprüft.
+          Dann braucht es Lernarrangements, die Wissen, Können und Wollen systematisch adressieren – und Lernende in begründetes Entscheiden bringen.
+        </p>
+
+        <ol class="tw-pl-6 tw-list-decimal tw-space-y-2 tw-mb-6">
+          <li><strong>Vom Stoff zum Bildungsgehalt:</strong> Nicht nur „Welche Inhalte?“, sondern „Welche Inhalte eröffnen Urteilskraft, Verantwortung und Reflexion?“</li>
+          <li><strong>Mehrdimensionale Aufgaben:</strong> Situationen, in denen fachliches Handeln begründet, abgewogen und verantwortet werden muss.</li>
+          <li><strong>Reflexion als Pflichtbestandteil:</strong> Prozess- und Ergebnisprüfung, Alternativen, Folgen, Wertebezug – nicht als „Extra“, sondern als Kern.</li>
+          <li><strong>Allgemeinbildung integriert:</strong> Allgemeinbildende Fächer nicht parallel, sondern zielorientiert in berufliche Kontexte eingebunden.</li>
+          <li><strong>Duales System nutzen:</strong> Lernorte als Bildungschance begreifen und didaktisch bewusst verzahnen.</li>
+        </ol>
+
+        <h2 class="tw-mt-10 tw-mb-3 tw-text-2xl tw-font-semibold">4) Fazit</h2>
+        <p class="tw-mb-6">
+          Aus den formalen Vorgaben der Berufsschule lässt sich ein klares Zielbild ableiten: die <strong>gebildete Fachkraft</strong>.
+          Damit wird deutlich, warum reine Ausbildung für den Beruf dem Anspruch nicht gerecht wird. Berufsschule muss Bildung im Beruf ermöglichen:
+          fachliches und übefachliches Wissen und Können, aber auch Urteilskraft, Haltung, Verantwortungsbereitschaft und Reflexionsfähigkeit.
+        </p>
+
+        <p class="tw-mb-6">
+          Unterricht wird dann anspruchsvoller – aber auch ehrlicher: Er misst sich nicht daran, ob Inhalte „durchgenommen“ sind,
+          sondern daran, ob Lernende in die Lage versetzt werden, berufliche Realität begründet, reflektiert und verantwortet zu gestalten.
+        </p>
+
+        <h2 class="tw-mt-10 tw-mb-3 tw-text-2xl tw-font-semibold">Literaturhinweise</h2>
+        <p class="tw-mt-1 tw-text-sm tw-text-gray-600">
+          <span>
+            <strong>KMK / Lehrplanbezug:</strong> einschlägige Rahmenvereinbarungen sowie landesspezifische Lehrpläne (Berufsschule).<br />
+            <strong>Theoriebezüge:</strong> Bildungstheoretische Unterscheidungen (material/formal) und Verschränkung (kategorial), Kompetenzmodelle (Selbst-, Sach-, Sozialkompetenz) sowie Dimensionen beruflichen Handelns (Wissen–Können–Wollen).
+          </span>
+        </p>
+      </article>
+
+      <hr class="tw-my-20" />
+
+      <!-- Meta/Links -->
+      <div class="tw-mt-10 tw-flex tw-flex-col tw-items-start tw-gap-3 tw-text-sm tw-text-gray-600">
+        <div class="tw-flex tw-flex-col tw-gap-1">
+          <a class="tw-inline-flex tw-items-center tw-gap-2 tw-underline" href="mailto:Moritz.Dier@uni-bayreuth.de">
+            <i class="bi bi-envelope" aria-hidden="true"></i><span>Feedback per Mail</span>
+          </a>
+          <a class="tw-inline-flex tw-items-center tw-gap-2 tw-underline" href="../index.html#blog">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i><span>Zurück zu Neuigkeiten</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <hr class="tw-mt-4" />
+    <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
+      <div class="tw-flex tw-gap-6 tw-text-2xl">
+        <a href="https://moritzdier.github.io/lab/" aria-label="Github"><i class="bi bi-github"></i></a>
+        <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
+      </div>
+    </footer>
+
+    <!-- Scripts (aus /blog relativ) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../index.js"></script>
+  </body>
+</html>
