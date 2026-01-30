@@ -1,1 +1,282 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>DSA-E: Educational Digital Support Agents – Blog | Dr. Moritz Dier</title>
+    <meta
+      name="description"
+      content="DSA-E (Educational Digital Support Agents): Eine eigene Klasse KI-basierter Tools, die Lehr-Lern-Prozesse domänenspezifisch, datensouverän und zieladäquat unterstützt."
+    />
+
+    <link rel="icon" type="image/png" href="https://moritzdier.github.io/lab/assets/logoN.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DSA-E: Educational Digital Support Agents – Blog | Dr. Moritz Dier" />
+    <meta property="og:description" content="Domänenspezifisch, datensouverän, zieladäquat – KI-Begleitung für Lehr-Lern-Prozesse." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://moritzdier.github.io/lab/blog/blog-dsa-e.html" />
+    <meta property="og:image" content="https://moritzdier.github.io/lab/assets/images/home/design.jpg" />
+
+    <!-- Styles (aus /blog relativ) -->
+    <link rel="stylesheet" href="../css/tailwind-build.css">
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+
+    <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
+      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="https://moritzdier.github.io/lab/">Wissenschaft &amp; Praxis</a>
+      <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+        <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+          <a class="header-links" href="../modelle.html">Modelle &amp; Konzepte</a>
+          <a class="header-links" href="../forschung.html">Forschung</a>
+          <a class="header-links" href="../lehre.html">Lehre</a>
+          <a class="header-links" href="../publikationen.html">Publikationen</a>
+          <a class="header-links" href="../blog.html">Blog</a>
+          <a class="header-links" href="../mich.html">Über mich</a>
+        </div>
+        <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
+          <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="Kontakt" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
+            <span>Kontakt</span>
+            <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header>
+
+    <!-- Blog-Hero -->
+    <section class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-flex-col tw-overflow-hidden tw-p-[5%] max-lg:tw-p-4 max-md:tw-mt-[50px]">
+      <div class="tw-flex tw-flex-col tw-space-y-6 tw-max-w-[900px]">
+        <a href="https://moritzdier.github.io/lab/"
+          class="tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-text-gray-600 hover:tw-underline">
+          <i class="bi bi-arrow-left"></i> Zurück zu Startseite
+        </a>
+
+        <h1 class="tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug">
+          <span class="tw-p-1 tw-px-6" style="background-color: #fbbf24;">Blog-Beitrag</span><br />
+          <span class="reveal-hero-text tw-text-gray-600">Educational Digital Support Agents - DSA-E</span>
+        </h1>
+
+        <p class="reveal-hero-text tw-mt-4 tw-text-justify tw-text-lg">
+          Warum generative Chatbots im Unterricht oft zu offen sind – und wie DSA-E Lehr-Lern-Prozesse domänenspezifisch, datensouverän und zieladäquat begleiten.
+        </p>
+      </div>
+
+      <div class="tw-flex tw-flex-col tw-gap-2 tw-mt-2">
+        <div class="tw-flex tw-items-center tw-gap-3">
+          <time class="tw-text-sm tw-text-gray-600" datetime="2026-01-30">30.11.2025</time>
+          <span class="tw-text-sm tw-text-gray-600">• Lesedauer: 5 Min</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artikel-Körper -->
+    <main lang="de" class="tw-relative tw-w-full tw-px-[5%] tw-py-8 max-lg:tw-px-4">
+      <article class="tw-max-w-3xl tw-mx-auto tw-text-justify tw-leading-8 tw-text-gray-800">
+
+        <p class="tw-mb-6"><strong>
+          KI ist im Bildungsalltag angekommen – vor allem als Chatbot. Das Problem: Offene, frei befragbare Systeme liefern häufig plausible, aber fachlich unsichere Antworten, verlieren Lernende schnell aus dem Fokus
+          und erzeugen zu wenig Tiefe im Lernprozess. Wenn wir KI als Lernunterstützung ernst nehmen, brauchen wir mehr als „Textgenerator plus Prompt“.
+          Genau dafür schlage ich eine eigene Tool-Klasse vor: <span class="tw-font-semibold">Educational Digital Support Agents (DSA-E)</span>.
+        </strong></p>
+
+        <h2 class="tw-mt-8 tw-mb-3 tw-text-2xl tw-font-semibold">Warum ein neuer Tool-Typ nötig ist</h2>
+        <p class="tw-mb-6">
+          Drei typische Schwachstellen generativer Standard-Chatbots im Unterricht sind aus meiner Sicht zentral:
+        </p>
+
+        <ul class="tw-pl-6 tw-list-disc marker:tw-text-gray-500 tw-space-y-2 tw-mb-6">
+          <li><strong>Faktentreue:</strong> Antworten wirken überzeugend, sind aber in spezialisierten Domänen schnell ungenau oder falsch.</li>
+          <li><strong>Fokus:</strong> Chatbots können nicht zuverlässig kanalisieren – Lernende driften thematisch ab.</li>
+          <li><strong>Tiefe:</strong> Ohne didaktische Gesprächsarchitektur bleibt es oft bei Oberfläche (Erklären lassen) statt Tiefenstruktur (Begründen, Prüfen, Reflektieren).</li>
+        </ul>
+
+        <p class="tw-mb-6">
+          DSA-E setzen genau hier an: nicht „mehr Chat“, sondern <strong>strukturierte, kontrollierbare Lernkommunikation</strong>.
+        </p>
+
+        <h2 class="tw-mt-8 tw-mb-3 tw-text-2xl tw-font-semibold">Definition: Was ist ein DSA-E?</h2>
+
+        <!-- Definition – farblich abgesetzter Abschnitt -->
+        <section
+          class="tw-mt-6 tw-mb-10 tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-100 tw-shadow-inner tw-p-6 md:tw-p-8"
+          style="background-color:#f1f5f9"
+          role="region" aria-labelledby="dsae-def-heading">
+
+          <h2 id="dsae-def-heading" class="tw-text-2xl tw-font-semibold tw-tracking-tight">DSA-E in einem Satz</h2>
+
+          <blockquote class="tw-mt-6 tw-rounded-xl tw-border-l-4 tw-border-indigo-500 tw-bg-indigo-50 tw-p-5 tw-text-base tw-italic">
+            <p>
+              <strong class="tw-not-italic">Educational Digital Support Agents (DSA-E)</strong> sind KI-basierte, jedoch nicht rein generative Chatbots zur individuellen Lehr-Lern-Begleitung und -Unterstützung,
+              welche den Dialogverlauf bestimmen, menschliche Aussagen objektiv fundiert kategorisieren, darauf mit kontextsensitiven Rückfragen reagieren, auf einer abgesicherten Datenbasis Antworten generieren
+              oder themenspezifische Reflexionsimpulse initiieren und zielgerichtet, systematisch in den Gesamtlernprozess eingebunden werden.
+            </p>
+          </blockquote>
+
+          <div class="tw-mt-8 tw-rounded-xl tw-border tw-border-slate-200 tw-p-5">
+            <h3 class="tw-mb-3 tw-text-xl tw-font-semibold">Wichtige Abgrenzung</h3>
+            <ul class="tw-pl-6 tw-list-disc marker:tw-text-gray-500 tw-space-y-2">
+              <li><strong>Nicht offen befragbar:</strong> DSA-E kommen kontextgebunden und vordefiniert zum Einsatz.</li>
+              <li><strong>Dialogpfade statt Beliebigkeit:</strong> Der Austausch folgt Regeln und Auslösern, abhängig von Nutzereingaben.</li>
+              <li><strong>Zielorientierung:</strong> Kommunikation ist nicht „Plaudern“, sondern systematischer Bestandteil des Lernprozesses.</li>
+            </ul>
+          </div>
+        </section>
+
+        <h2 class="tw-mt-8 tw-mb-3 tw-text-2xl tw-font-semibold">Die drei Konstruktionsprinzipien</h2>
+        <p class="tw-mb-6">
+          DSA-E sind dann sinnvoll, wenn sie drei Prinzipien konsequent erfüllen:
+        </p>
+
+        <div class="tw-mt-6 tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-white tw-shadow-sm tw-p-6 md:tw-p-8">
+          <dl class="tw-grid tw-gap-6">
+            <div class="tw-flex tw-items-start tw-gap-3">
+              <i class="bi bi-bounding-box-circles tw-text-amber-600 tw-mt-1" aria-hidden="true"></i>
+              <div>
+                <dt class="tw-text-base tw-font-semibold">1) Domänenspezifisch</dt>
+                <dd class="tw-mt-1 tw-text-gray-800">
+                  Inhalte, Sprache und Beispiele sind auf eine konkrete Domäne (Fach, Lernfeld, Ausbildungsberuf) zugeschnitten – statt „Allzweckwissen“.
+                </dd>
+              </div>
+            </div>
+
+            <div class="tw-flex tw-items-start tw-gap-3">
+              <i class="bi bi-shield-check tw-text-emerald-600 tw-mt-1" aria-hidden="true"></i>
+              <div>
+                <dt class="tw-text-base tw-font-semibold">2) Datensouverän</dt>
+                <dd class="tw-mt-1 tw-text-gray-800">
+                  Die Datenbasis ist bestimmbar. Der Agent generiert Antworten aus einer abgesicherten Wissensbasis – und kann in kritischen Fällen auf fachlich korrekte, vorgegebene Aussagen begrenzt werden.
+                </dd>
+              </div>
+            </div>
+
+            <div class="tw-flex tw-items-start tw-gap-3">
+              <i class="bi bi-diagram-3 tw-text-indigo-600 tw-mt-1" aria-hidden="true"></i>
+              <div>
+                <dt class="tw-text-base tw-font-semibold">3) Zieladäquat</dt>
+                <dd class="tw-mt-1 tw-text-gray-800">
+                  Der Dialog ist didaktisch gebaut: Rückfragen, Prüfungen, Vertiefungen und Reflexionsimpulse sind nicht „Zufall“, sondern Teil der Architektur.
+                </dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+
+        <h2 class="tw-mt-10 tw-mb-3 tw-text-2xl tw-font-semibold">Technischer Kern: Hybrid statt „nur LLM“</h2>
+        <p class="tw-mb-6">
+          Technisch sind DSA-E bewusst <strong>hybrid</strong> gedacht. Kurzform:
+          <strong>LLM für Sprache</strong>, <strong>Retrieval für Faktentreue</strong>, <strong>NLP für Struktur und Steuerung</strong>.
+        </p>
+
+        <div class="tw-mt-6 tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-6 md:tw-p-8">
+          <h3 class="tw-text-xl tw-font-semibold tw-tracking-tight">Wie das praktisch zusammenspielt</h3>
+          <ul class="tw-mt-4 tw-pl-6 tw-list-disc marker:tw-text-gray-500 tw-space-y-2">
+            <li><strong>NLP-Bausteine</strong> (z. B. Intenterkennung, Entitätenextraktion) strukturieren Eingaben und kanalisieren den Gesprächsverlauf.</li>
+            <li><strong>Retrieval Augmented Generation (RAG)</strong> greift an definierten Stellen auf kuratierte Daten zu und reduziert Halluzination.</li>
+            <li><strong>LLMs</strong> erzeugen verständliche, adaptive Formulierungen – innerhalb der didaktisch vorgegebenen Pfade.</li>
+          </ul>
+          <p class="tw-mt-4 tw-mb-0 tw-text-gray-800">
+            Wichtig: DSA-E sind in der Entwicklung aktuell noch <strong>ressourcenintensiv</strong>. Genau deshalb lohnt es sich, sie dort zu bauen, wo sie einen echten Mehrwert liefern: bei klaren Lernzielen,
+            klarer Domäne und klarer Datenbasis.
+          </p>
+        </div>
+
+        <h2 class="tw-mt-10 tw-mb-3 tw-text-2xl tw-font-semibold">Drei Beispiele (aus der beruflichen Bildung)</h2>
+        <p class="tw-mb-6">
+          Um die Tool-Klasse greifbar zu machen, hier drei prototypische Einsatzformen:
+        </p>
+
+        <div class="tw-grid tw-gap-4">
+          <section class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-white tw-shadow-sm tw-p-6">
+            <h3 class="tw-text-xl tw-font-semibold"><i class="bi bi-chat-square-quote tw-mr-2" aria-hidden="true"></i>Respect-Interviewer</h3>
+            <p class="tw-mt-2 tw-mb-0">
+              KI-gestützter Interviewer zur Werteklärung: sammelt und strukturiert subjektive Sichtweisen, stellt gezielte Rückfragen und liefert verdichtete Ausgaben als Grundlage für Unterrichtsphasen.
+            </p>
+          </section>
+
+          <section class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-white tw-shadow-sm tw-p-6">
+            <h3 class="tw-text-xl tw-font-semibold"><i class="bi bi-tools tw-mr-2" aria-hidden="true"></i>Instandhaltungs-Agent</h3>
+            <p class="tw-mt-2 tw-mb-0">
+              Übungs- und Vertiefungsagent für fachliche Inhalte (z. B. Grundlagen der Instandhaltung): unterstützt Wiederholung, Prüfung und Vorbereitung auf Leistungssituationen – mit domänenspezifischer Datenbasis.
+            </p>
+          </section>
+
+          <section class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-white tw-shadow-sm tw-p-6">
+            <h3 class="tw-text-xl tw-font-semibold"><i class="bi bi-mortarboard tw-mr-2" aria-hidden="true"></i>Objectify</h3>
+            <p class="tw-mt-2 tw-mb-0">
+              Unterstützung in der Lehrkräftebildung: hilft, subjektive Theorien zu aktivieren, zu strukturieren und reflektierbar zu machen – als Grundlage für Professionalisierungsprozesse.
+            </p>
+          </section>
+        </div>
+
+        <h2 class="tw-mt-10 tw-mb-3 tw-text-2xl tw-font-semibold">Was heißt das für die Praxis?</h2>
+        <p class="tw-mb-6">
+          Wenn du DSA-E konsequent denkst, ergeben sich klare Design-Entscheidungen:
+        </p>
+
+        <ol class="tw-pl-6 tw-list-decimal tw-space-y-2 tw-mb-6">
+          <li><strong>Erst Lernziel, dann Tool:</strong> DSA-E sind kein „KI-Add-on“, sondern Lernprozess-Baustein.</li>
+          <li><strong>Quelle vor Sprache:</strong> Ohne abgesicherte Datenbasis wird es wieder ein beliebiger Chatbot.</li>
+          <li><strong>Dialogarchitektur ist Didaktik:</strong> Gute Prompts ersetzen keine vordefinierten Pfade, Regeln und Auslöser.</li>
+          <li><strong>Evaluation einplanen:</strong> Akzeptanz und Lernwirkung müssen iterativ geprüft werden (Expert:innen- und Lernendenfeedback).</li>
+        </ol>
+
+        <blockquote class="tw-mt-8 tw-rounded-xl tw-border-l-4 tw-border-amber-500 tw-bg-amber-50 tw-p-5 tw-text-base tw-italic">
+          <h3 class="tw-mb-2 tw-text-xl tw-font-semibold tw-not-italic">Meine Position in einem Satz:</h3>
+          <p class="tw-mb-0">
+            Für Unterricht reicht „ChatGPT im Klassenzimmer“ nicht alleine – wir brauchen didaktisch konstruierte, domänenspezifische und datensouveräne Agenten, die Lernkommunikation gezielt unterstützen.
+          </p>
+        </blockquote>
+
+        <h2 class="tw-mt-10 tw-mb-3 tw-text-2xl tw-font-semibold">Literaturhinweis</h2>
+        <p class="tw-mt-1 tw-text-sm tw-text-gray-600">
+          <span>
+      <strong>Moritz Dier (2024)</strong>
+      <em>Educational Digital Support Agent (DSA-E) zur Lehr-Lern-Begleitung in der Beruflichen Bildung.</em>
+      <span class="tw-text-gray-700">Zeitschrift für Berufs- und Wirtschaftspädagogik, 120(3), 450–473.</span><br>
+      <span class="tw-text-sm tw-text-gray-600">
+        DOI:
+        <a href="https://doi.org/10.25162/zbw-2024-0018" target="_blank" rel="noopener"
+           class="tw-underline tw-font-mono tw-text-[13px] tw-break-all">https://doi.org/10.25162/zbw-2024-0018</a>
+      </span>
+    </span>
+        </p>
+      </article>
+
+      <hr class="tw-my-20" />
+
+      <!-- Meta/Links -->
+      <div class="tw-mt-10 tw-flex tw-flex-col tw-items-start tw-gap-3 tw-text-sm tw-text-gray-600">
+        <div class="tw-flex tw-flex-col tw-gap-1">
+          <a class="tw-inline-flex tw-items-center tw-gap-2 tw-underline" href="mailto:Moritz.Dier@uni-bayreuth.de">
+            <i class="bi bi-envelope" aria-hidden="true"></i><span>Feedback per Mail</span>
+          </a>
+          <a class="tw-inline-flex tw-items-center tw-gap-2 tw-underline" href="../index.html#blog">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i><span>Zurück zu Neuigkeiten</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <hr class="tw-mt-4" />
+    <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
+      <div class="tw-flex tw-gap-6 tw-text-2xl">
+        <a href="https://moritzdier.github.io/lab/" aria-label="Github"><i class="bi bi-github"></i></a>
+        <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
+      </div>
+    </footer>
+
+    <!-- Scripts (aus /blog relativ) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../index.js"></script>
+  </body>
+</html>
