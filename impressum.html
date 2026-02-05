@@ -1,77 +1,254 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Impressum | Dr. Moritz Dier</title>
-  <meta name="description" content="Impressum von Dr. Moritz Dier gemäß § 5 DDG." />
-</head>
-<body>
-  <header>
-    <nav aria-label="Hauptnavigation">
-      <a href="/lab/">Wissenschaft & Praxis</a> |
-      <a href="/lab/modelle-konzepte.html">Modelle & Konzepte</a> |
-      <a href="/lab/forschung.html">Forschung</a> |
-      <a href="/lab/lehre.html">Lehre</a> |
-      <a href="/lab/publikationen.html">Publikationen</a> |
-      <a href="/lab/blog.html">Blog</a> |
-      <a href="/lab/ueber-mich.html">Über mich</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum & Datenschutz | Dr. Moritz Dier</title>
+    <meta name="description" content="Impressum und Datenschutzerklärung von Dr. Moritz Dier." />
 
-  <main>
-    <h1>Impressum</h1>
-    <p><strong>Angaben gemäß § 5 DDG</strong></p>
+    <link rel="shortcut icon" type="image/x-icon" href="/lab/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/lab/assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/lab/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/lab/assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/lab/assets/apple-touch-icon.png" />
 
-    <p>
-      Dr. Moritz Dier<br />
-      Kerschensteinerstraße 6<br />
-      95448 Bayreuth<br />
-      Deutschland
-    </p>
+    <meta property="og:title" content="Impressum & Datenschutz | Dr. Moritz Dier" />
+    <meta property="og:description" content="Impressum und Datenschutzerklärung." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moritzdier.github.io/lab/impressum.html" />
+    <meta property="og:image" content="https://moritzdier.github.io/lab/assets/logoN.png" />
 
-    <h2>Kontakt</h2>
-    <p>
-      E-Mail: <a href="mailto:Moritz.Dier@uni-bayreuth.de">Moritz.Dier@uni-bayreuth.de</a><br />
-    </p>
+    <link rel="stylesheet" href="./css/tailwind-build.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-    <p>
-      Dr. Moritz Dier<br />
-      Kerschensteinerstraße 6<br />
-      95448 Bayreuth<br />
-      Deutschland
-    </p>
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+    <!-- Header (wie Index) -->
+    <header
+      class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around"
+    >
+      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="https://moritzdier.github.io/lab/"
+        >Wissenschaft & Praxis</a
+      >
+      <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+        <div
+          class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+        >
+          <a class="header-links" href="modelle.html">Modelle & Konzepte</a>
+          <a class="header-links" href="forschung.html">Forschung</a>
+          <a class="header-links" href="lehre.html">Lehre</a>
+          <a class="header-links" href="publikationen.html">Publikationen</a>
+          <a class="header-links" href="blog.html">Blog</a>
+          <a class="header-links" href="mich.html">Über mich</a>
+        </div>
+        <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
+          <a
+            href="mailto:Moritz.Dier@uni-bayreuth.de"
+            aria-label="Kontakt"
+            class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+          >
+            <span>Kontakt</span>
+            <div
+              class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black"
+            >
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button
+        class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+        onclick="toggleHeader()"
+        aria-label="menu"
+        id="collapse-btn"
+      ></button>
+    </header>
 
-    <h2>Hinweis zur beruflichen Darstellung</h2>
-    <p>
-      Diese Website dient der Darstellung beruflicher Tätigkeiten in den Bereichen
-      Wissenschaft, Lehre und berufliche Bildung.
-    </p>
+    <!-- Content -->
+    <section class="tw-relative tw-mt-[140px] tw-w-full tw-max-w-[100vw] tw-p-[5%] max-lg:tw-p-4 max-md:tw-mt-[80px]">
+      <div class="tw-mx-auto tw-w-full tw-max-w-[900px] tw-rounded-xl tw-border-2 tw-border-black tw-bg-white tw-p-6 tw-shadow-md">
+        <h1 class="tw-text-4xl tw-font-semibold max-lg:tw-text-3xl">Impressum & Datenschutz</h1>
 
-    <h2>Urheberrecht</h2>
-    <p>
-      Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht.
-      Jede Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen Zustimmung
-      der jeweiligen Rechteinhaber.
-    </p>
+        <div class="tw-mt-4 tw-flex tw-flex-wrap tw-gap-3 tw-text-sm">
+          <a class="tw-underline" href="#impressum">Zum Impressum</a>
+          <span>·</span>
+          <a class="tw-underline" href="#datenschutz">Zur Datenschutzerklärung</a>
+        </div>
 
-    <h2>Haftung für Links</h2>
-    <p>
-      Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte
-      externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
-      verantwortlich.
-    </p>
+        <div class="tw-my-6 tw-h-[1px] tw-w-full tw-bg-black"></div>
 
-    <p>Stand: 05.02.2026</p>
-  </main>
+        <!-- IMPRESSUM -->
+        <h2 id="impressum" class="tw-text-2xl tw-font-semibold">Impressum</h2>
+        <p class="tw-mt-2 tw-font-semibold">Angaben gemäß § 5 DDG</p>
 
-  <footer>
-    <hr />
-    <p>
-      <a href="/lab/impressum.html" aria-current="page">Impressum</a> |
-      <a href="/lab/datenschutz.html">Datenschutz</a>
-    </p>
-  </footer>
-</body>
+        <p class="tw-mt-2">
+          Dr. Moritz Dier<br />
+          Kerschensteinerstraße 6<br />
+          95448 Bayreuth<br />
+          Deutschland
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">Kontakt</h3>
+        <p class="tw-mt-2">
+          E-Mail:
+          <a class="tw-underline" href="mailto:Moritz.Dier@uni-bayreuth.de">Moritz.Dier@uni-bayreuth.de</a>
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+        <p class="tw-mt-2">
+          Dr. Moritz Dier<br />
+          Kerschensteinerstraße 6<br />
+          95448 Bayreuth<br />
+          Deutschland
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">Hinweis zur beruflichen Darstellung</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Diese Website dient der Darstellung beruflicher Tätigkeiten in den Bereichen Wissenschaft, Lehre und berufliche Bildung.
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">Urheberrecht</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht. Jede Verwertung außerhalb der
+          Grenzen des Urheberrechts bedarf der vorherigen Zustimmung der jeweiligen Rechteinhaber.
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">Haftung für Links</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der
+          verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+
+        <div class="tw-my-8 tw-h-[1px] tw-w-full tw-bg-black"></div>
+
+        <!-- DATENSCHUTZ -->
+        <h2 id="datenschutz" class="tw-text-2xl tw-font-semibold">Datenschutzerklärung</h2>
+
+        <h3 class="tw-mt-4 tw-text-xl tw-font-semibold">1. Verantwortlicher</h3>
+        <p class="tw-mt-2">
+          Dr. Moritz Dier<br />
+          Kerschensteinerstraße 6<br />
+          95448 Bayreuth<br />
+          Deutschland<br />
+          E-Mail:
+          <a class="tw-underline" href="mailto:Moritz.Dier@uni-bayreuth.de">Moritz.Dier@uni-bayreuth.de</a>
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">2. Hosting (GitHub Pages)</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website werden durch den Hosting-Anbieter technisch
+          erforderliche Informationen verarbeitet (insbesondere IP-Adresse, Datum/Uhrzeit, angeforderte Inhalte, Browser-/Geräteinformationen,
+          Referrer/Quelle).
+        </p>
+        <p class="tw-mt-2 tw-text-justify">
+          Zweck: Auslieferung der Website, Gewährleistung von Stabilität und Sicherheit.
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren und zuverlässigen Betrieb).
+        </p>
+        <p class="tw-mt-2">
+          Informationen zum Datenschutz bei GitHub:
+          <a
+            class="tw-underline"
+            href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub Privacy Statement</a
+          >
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">3. Server-Logs</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Bei der Nutzung können Server-Logdaten anfallen (z. B. IP-Adresse, Zeitpunkt, angeforderte Datei/URL, Statuscode, Referrer,
+          Browsertyp/-version, Betriebssystem). Diese Daten werden zur technischen Bereitstellung, Fehleranalyse und Abwehr von Angriffen
+          verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">4. Kontaktaufnahme per E-Mail</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Wenn Sie mich per E-Mail kontaktieren, verarbeite ich die von Ihnen übermittelten Daten (z. B. Name, E-Mail-Adresse, Inhalt der
+          Nachricht) zur Bearbeitung Ihres Anliegens.
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche/vertragliche Kommunikation) oder Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">5. Externe Inhalte und Ressourcen (CDNs/Fonts)</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Auf dieser Website werden externe Ressourcen eingebunden (z. B. Google Fonts und Bibliotheken über cdnjs).
+          Dabei kann Ihre IP-Adresse an die jeweiligen Anbieter übermittelt werden, da ohne diese Übermittlung eine Auslieferung nicht möglich ist.
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionalen und performanten Darstellung).
+        </p>
+        <ul class="tw-mt-2 tw-list-disc tw-pl-6">
+          <li>Google Fonts (fonts.googleapis.com)</li>
+          <li>cdnjs (z. B. Bootstrap Icons, GSAP)</li>
+        </ul>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">6. Empfänger / Drittlandübermittlung</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Empfänger können technische Dienstleister sein (insbesondere Hosting und CDN-Anbieter). Je nach Anbieter kann eine Verarbeitung
+          auch außerhalb der EU/des EWR stattfinden (z. B. USA). Details ergeben sich aus den Datenschutzhinweisen der jeweiligen Anbieter.
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">7. Speicherdauer</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Daten werden nur so lange gespeichert, wie es für die genannten Zwecke erforderlich ist bzw. gesetzliche Pflichten dies vorsehen.
+          Bei E-Mail-Kontakt werden Inhalte in der Regel bis zur abschließenden Bearbeitung gespeichert (und ggf. länger, wenn Aufbewahrungspflichten greifen).
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">8. Ihre Rechte</h3>
+        <p class="tw-mt-2">Sie haben nach DSGVO insbesondere folgende Rechte:</p>
+        <ul class="tw-mt-2 tw-list-disc tw-pl-6">
+          <li>Auskunft (Art. 15 DSGVO)</li>
+          <li>Berichtigung (Art. 16 DSGVO)</li>
+          <li>Löschung (Art. 17 DSGVO)</li>
+          <li>Einschränkung (Art. 18 DSGVO)</li>
+          <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+          <li>Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (Art. 21 DSGVO)</li>
+        </ul>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">9. Beschwerderecht</h3>
+        <p class="tw-mt-2 tw-text-justify">
+          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.
+        </p>
+
+        <h3 class="tw-mt-6 tw-text-xl tw-font-semibold">10. Keine automatisierte Entscheidungsfindung</h3>
+        <p class="tw-mt-2">Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht statt.</p>
+
+        <p class="tw-mt-8 tw-text-sm">Stand: 05.02.2026</p>
+      </div>
+    </section>
+
+    <!-- Footer (wie Index + Legal-Link) -->
+    <hr class="tw-mt-4" />
+    <footer
+      class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
+    >
+      <div class="tw-flex tw-gap-6 tw-text-2xl">
+        <a href="https://moritzdier.github.io/lab/" aria-label="Github"><i class="bi bi-github"></i></a>
+        <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
+      </div>
+
+      <div class="tw-text-sm">
+        <a class="tw-underline" href="/lab/impressum.html" aria-current="page">Impressum & Datenschutz</a>
+      </div>
+    </footer>
+
+    <!-- Scripts (wie Index) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
