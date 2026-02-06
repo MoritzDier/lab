@@ -231,9 +231,16 @@
        <p>
       Schreiben Sie mir kurz, ich komme gerne für einen Vortrag oder Workshop vorbei.
       </p>
-      <a class="tw-inline-flex tw-items-center tw-gap-2 tw-underline" href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20(Workshop/Impuls)%20%E2%80%93%20Instruktion%20vs.%20Konstruktion">
-        <i class="bi bi-envelope" aria-hidden="true"></i><span>E-Mail an</span>  
-      </a>
+          <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
+          <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20(Workshop/Impuls)%20%E2%80%93%20Instruktion%20vs.%20Konstruktion" aria-label="E-Mail" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
+            <span>E-Mail</span>
+            <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
       <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20(Workshop/Impuls)%20%E2%80%93%20Instruktion%20vs.%20Konstruktion"
        class="tw-text-sm tw-text-gray-700 hover:tw-underline">
       Moritz.Dier@uni-bayreuth.de
