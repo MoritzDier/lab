@@ -115,7 +115,8 @@
     <h2 class="tw-text-2xl tw-font-semibold tw-text-gray-900">Aktuell in Arbeit</h2>
     <p class="tw-mt-1 tw-text-sm tw-text-gray-600">Forschung &amp; Transfer – woran ich gerade konkret arbeite.</p>
 
-    <div class="tw-mt-6 tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-4">
+    <!-- Fallback-Grid via Inline-CSS (falls tw-grid nicht greift) -->
+    <div class="tw-mt-6" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px;">
       <!-- Karte 1 -->
       <div class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-5">
         <div class="tw-flex tw-items-start tw-gap-3">
@@ -129,7 +130,7 @@
         </div>
       </div>
 
-      <!-- Karte 2 (mit PDF-Link) -->
+      <!-- Karte 2 -->
       <div class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-5">
         <div class="tw-flex tw-items-start tw-gap-3">
           <i class="bi bi-compass tw-text-xl tw-text-slate-700" aria-hidden="true"></i>
@@ -174,6 +175,16 @@
         </div>
       </div>
     </div>
+
+    <!-- Mobile: unter 760px automatisch 1 Spalte -->
+    <style>
+      @media (max-width: 760px){
+        #aktuell > div > div[style*="grid-template-columns"]{
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
+
   </div>
 </section>
 
