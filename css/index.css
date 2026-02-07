@@ -176,31 +176,6 @@ header > .collapsible-header{
     /* background-color: #dedddd; */
 }
 
-@media not all and (min-width: 1024px) {
-    header .collapsible-header {
-        position: fixed;
-        right: 0px;
-        flex-direction: column;
-        opacity: 0;
-        height: 100vh;
-        min-height: 100vh;
-        height: 100dvh;
-        width: 0vw;
-        justify-content: space-between;
-        padding: 5px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        place-items: end;
-        background-color: #ffffff;
-        color: #000000;
-        overflow-y: auto;
-        box-shadow: 2px 0px 3px #000;
-    }
-
-    .header-links{
-        color: black;
-    }
-
 /* Aktuell-Karten: robust, blog-ähnlich */
 .work-grid{
   display:grid;
@@ -265,6 +240,32 @@ header > .collapsible-header{
 .work-meta i{
   font-size:16px;
 }
+/* Aktuell-Karten: robust, blog-ähnlich */
+
+@media not all and (min-width: 1024px) {
+    header .collapsible-header {
+        position: fixed;
+        right: 0px;
+        flex-direction: column;
+        opacity: 0;
+        height: 100vh;
+        min-height: 100vh;
+        height: 100dvh;
+        width: 0vw;
+        justify-content: space-between;
+        padding: 5px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        place-items: end;
+        background-color: #ffffff;
+        color: #000000;
+        overflow-y: auto;
+        box-shadow: 2px 0px 3px #000;
+    }
+
+    .header-links{
+        color: black;
+    }
 
     
 }
