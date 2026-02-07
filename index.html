@@ -109,82 +109,58 @@
 </section>
 
 
-<!-- Aktuell in Arbeit – Forschung & Transfer (Karten) -->
+<!-- Aktuell in Arbeit – Forschung & Transfer -->
 <section id="aktuell" class="tw-mt-14 tw-w-full tw-px-[5%] max-lg:tw-px-4">
   <div class="tw-mx-auto tw-max-w-5xl">
     <h2 class="tw-text-2xl tw-font-semibold tw-text-gray-900">Aktuell in Arbeit</h2>
     <p class="tw-mt-1 tw-text-sm tw-text-gray-600">Forschung &amp; Transfer – woran ich gerade konkret arbeite.</p>
 
-    <!-- Fallback-Grid via Inline-CSS (falls tw-grid nicht greift) -->
-    <div class="tw-mt-6" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px;">
-      <!-- Karte 1 -->
-      <div class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-5">
-        <div class="tw-flex tw-items-start tw-gap-3">
-          <i class="bi bi-person-badge tw-text-xl tw-text-slate-700" aria-hidden="true"></i>
-          <div>
-            <h3 class="tw-font-semibold tw-text-gray-900">KI-Kompetenzprofile von Lehrkräften</h3>
-            <p class="tw-mt-1 tw-text-sm tw-text-gray-700">
-              Entwicklung eines Erhebungsinstruments aus Selbsteinschätzung und Performanzaufgaben, um Kompetenzprofile und Entwicklung sichtbar zu machen.
-            </p>
+    <div class="work-grid">
+      <!-- 1 -->
+      <div class="work-card">
+        <div class="work-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></div>
+        <div>
+          <div class="work-title">KI-Kompetenzprofile von Lehrkräften</div>
+          <div class="work-text">
+            Entwicklung eines Erhebungsinstruments aus Selbsteinschätzung und Performanzaufgaben, um Kompetenzprofile und Entwicklung sichtbar zu machen.
           </div>
         </div>
       </div>
 
-      <!-- Karte 2 -->
-      <div class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-5">
-        <div class="tw-flex tw-items-start tw-gap-3">
-          <i class="bi bi-compass tw-text-xl tw-text-slate-700" aria-hidden="true"></i>
-          <div>
-            <h3 class="tw-font-semibold tw-text-gray-900">KI-souveräne berufspädagogisch-didaktische Könnerschaft“</h3>
-            <p class="tw-mt-1 tw-text-sm tw-text-gray-700">
-              Entwicklung eines Kompetenzmodells über das professionelle Handeln von Lehrkräften an beruflichen Schulen in der KI-Ära.
-            </p>
-            <a href="https://moritzdier.github.io/lab/assets/docs/KI-souveraene-berufspaedagogisch-didaktische-Koennerschaft.pdf"
-               class="tw-mt-3 tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium tw-text-gray-800 hover:tw-underline"
-               target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
-              PDF öffnen
-            </a>
+      <!-- 2 (PDF-Link wie von dir angegeben) -->
+      <a class="work-card" href="https://moritzdier.github.io/lab/assets/docs/KI-souveraene-berufspaedagogisch-didaktische-Koennerschaft.pdf" target="_blank" rel="noopener">
+        <div class="work-icon"><i class="bi bi-compass" aria-hidden="true"></i></div>
+        <div>
+          <div class="work-title">Kompetenzmodell „KI-souveräne berufspädagogisch-didaktische Könnerschaft“</div>
+          <div class="work-text">
+            Beschreibung des professionelle Handelns von Lehrkräften an beruflichen Schulen unter den Bedingungen der KI-Ära
+          </div>
+          <div class="work-meta"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> PDF öffnen</div>
+        </div>
+      </a>
+
+      <!-- 3 -->
+      <div class="work-card">
+        <div class="work-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
+        <div>
+          <div class="work-title">Adaptive Unterrichtseinheiten mit KI</div>
+          <div class="work-text">
+            Design und Erprobung individualisierter Lernpfade, begleitet durch Wirkungsforschung (Motivation, Lernerfolg).
           </div>
         </div>
       </div>
 
-      <!-- Karte 3 -->
-      <div class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-5">
-        <div class="tw-flex tw-items-start tw-gap-3">
-          <i class="bi bi-diagram-3 tw-text-xl tw-text-slate-700" aria-hidden="true"></i>
-          <div>
-            <h3 class="tw-font-semibold tw-text-gray-900">Adaptive Unterrichtseinheiten mit KI</h3>
-            <p class="tw-mt-1 tw-text-sm tw-text-gray-700">
-              Design und Erprobung individualisierter Lernpfade, begleitet durch Wirkungsforschung (Motivation, Lernerfolg).
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Karte 4 -->
-      <div class="tw-rounded-2xl tw-border tw-border-slate-200 tw-bg-slate-50 tw-p-5">
-        <div class="tw-flex tw-items-start tw-gap-3">
-          <i class="bi bi-mortarboard tw-text-xl tw-text-slate-700" aria-hidden="true"></i>
-          <div>
-            <h3 class="tw-font-semibold tw-text-gray-900">KI im Studium der Beruflichen Bildung</h3>
-            <p class="tw-mt-1 tw-text-sm tw-text-gray-700">
-              Promptanalyse darüber, wie Studierende KI tatsächlich nutzen, wo KI unterstützt und wo didaktische Leitplanken fehlen.
-            </p>
+      <!-- 4 -->
+      <div class="work-card">
+        <div class="work-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+        <div>
+          <div class="work-title">KI im Studium der Beruflichen Bildung</div>
+          <div class="work-text">
+            Wie Studierende KI tatsächlich nutzen, wo es hilft und wo es didaktisch kippt.
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Mobile: unter 760px automatisch 1 Spalte -->
-    <style>
-      @media (max-width: 760px){
-        #aktuell > div > div[style*="grid-template-columns"]{
-          grid-template-columns: 1fr !important;
-        }
-      }
-    </style>
-
   </div>
 </section>
 
