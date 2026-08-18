@@ -21,10 +21,8 @@ header > a:first-of-type {
     width: clamp(210px, 30vw, 440px);
     height: clamp(58px, 6.15vw, 90px);
     overflow: hidden;
-    background: url("../assets/dierlab-logo.png") left center / contain no-repeat;
+    background: url("../assets/dierlab-logo-transparent-dark.png") left center / contain no-repeat;
     color: transparent;
-    filter: grayscale(1) contrast(1.2);
-    mix-blend-mode: multiply;
     font-size: 0;
     white-space: nowrap;
 }
