@@ -16,6 +16,21 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
+.dierlab-hero-logo {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+    .dierlab-hero-logo {
+        max-width: 360px;
+        margin-bottom: 1.5rem;
+    }
+}
+
 header{
     /* background-color: #fff;
     color: #000; */
