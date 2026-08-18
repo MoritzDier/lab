@@ -1,6 +1,6 @@
 // initialization
 
-const RESPONSIVE_WIDTH = 1024
+const RESPONSIVE_WIDTH = 1280
 
 let headerWhiteBg = false
 let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH
@@ -41,7 +41,7 @@ function toggleHeader() {
 }
 
 function responsive() {
-    if (window.innerWidth > RESPONSIVE_WIDTH) {
+    if (window.innerWidth >= RESPONSIVE_WIDTH) {
         collapseHeaderItems.style.width = ""
 
     } else {
@@ -119,6 +119,4 @@ sections.forEach((sec) => {
 
 
 })
-
-
 

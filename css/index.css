@@ -16,24 +16,99 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
-.dierlab-hero-logo {
-    display: block;
-    width: 100%;
-    max-width: 520px;
-    height: auto;
-    margin-bottom: 2rem;
+header > a:first-of-type {
+    flex: 0 0 clamp(210px, 30vw, 440px);
+    width: clamp(210px, 30vw, 440px);
+    height: clamp(58px, 6.15vw, 90px);
+    overflow: hidden;
+    background: url("../assets/dierlab-logo.png") left center / contain no-repeat;
+    color: transparent;
+    filter: grayscale(1) contrast(1.2);
+    mix-blend-mode: multiply;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.dierlab-footer-brand {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding-left: 132px;
+    background: url("../assets/dierlab-mark-black.png") left center / 112px auto no-repeat;
+    color: #111;
+    text-decoration: none;
+}
+
+.dierlab-footer-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.dierlab-footer-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.dierlab-footer-slogan {
+    max-width: 250px;
+    color: #4b5563;
+    font-size: 0.75rem;
+    line-height: 1.25;
 }
 
 @media (max-width: 767px) {
-    .dierlab-hero-logo {
-        max-width: 360px;
-        margin-bottom: 1.5rem;
+    footer.tw-mt-auto {
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    footer.tw-mt-auto > div {
+        align-items: flex-start;
+    }
+
+    .dierlab-footer-brand {
+        width: 100%;
+        padding-left: 104px;
+        background-size: 88px auto;
+    }
+
+    .dierlab-footer-slogan {
+        max-width: 170px;
     }
 }
 
-header{
+header.tw-top-0 {
+    align-items: center;
+    height: clamp(84px, 8vw, 112px);
+    padding-right: clamp(16px, 4vw, 64px);
+    padding-left: clamp(16px, 4vw, 64px);
+    top: clamp(8px, 0.8vw, 12px);
     /* background-color: #fff;
     color: #000; */
+}
+
+body > header.tw-top-0 + section:not(#titel) {
+    margin-top: 0;
+    padding-top: clamp(120px, 10.4vw, 150px);
+}
+
+body > header.tw-top-0 + #titel {
+    margin-top: 0;
+    padding-top: clamp(96px, 6vw, 110px);
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#titel > div:first-child {
+    padding-top: clamp(16px, 2vw, 32px);
+}
+
+#collapse-btn {
+    display: none;
 }
 
 
@@ -192,7 +267,19 @@ header > .collapsible-header{
 }
 
 
-@media not all and (min-width: 1024px) {
+@media (max-width: 1279px) {
+    #collapse-btn {
+        display: block;
+    }
+
+    header.tw-top-0 {
+        justify-content: flex-start;
+    }
+
+    #titel > div:first-child {
+        flex-direction: column;
+    }
+
     header .collapsible-header {
         position: fixed;
         right: 0px;
