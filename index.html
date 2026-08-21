@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Moritz Dier | Wissenschaft.Praxis.Berufliche Bildung</title>
     <meta name="description" content="Dr. Moritz Dier – Wissenschaft, Praxis und Berufliche Bildung: Forschung, Lehre, Publikationen und aktuelle Beiträge." />
-    <link rel="shortcut icon" type="image/x-icon" href="/lab/assets/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="/lab/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/lab/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/lab/assets/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/lab/assets/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Dr. Moritz Dier | Wissenschaft.Praxis.Berufliche Bildung" />
     <meta property="og:description" content="Wissenschaft, Praxis und Berufliche Bildung: Forschung, Lehre, Publikationen und aktuelle Beiträge." />
@@ -18,16 +18,46 @@
     <meta property="og:image" content="https://moritzdier.github.io/lab/assets/logoN.png" />
     
     <link rel="stylesheet" href="./css/tailwind-build.css">
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.css?v=2026-08-21-v2" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
-  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
-  
+  <body class="home-page intro-active tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+
+    <!-- Visitenkarten-Intro -->
+    <section class="card-intro" aria-labelledby="card-intro-title">
+      <div class="card-intro__backdrop" aria-hidden="true"></div>
+      <div class="card-intro__question-wrap">
+        <p id="card-intro-title" class="card-intro__question">
+          Wie entstehen<br />
+          Lern- und<br />
+          Entwicklungsräume,<br />
+          die <span class="card-intro__emphasis">eigenes Denken<br />provozieren</span><span class="card-intro__triangle" aria-hidden="true"></span><br />
+          und professionelles<br />
+          Handeln ermöglichen?
+        </p>
+      </div>
+
+      <div class="card-intro__brand" aria-label="DIERLab – Wissenschaft fundiert, Praxis verändert">
+        <div class="card-intro__shapes" aria-hidden="true">
+          <span class="card-intro__square"></span>
+          <span class="card-intro__circle"></span>
+          <span class="card-intro__brand-triangle"></span>
+        </div>
+        <div class="card-intro__wordmark">DIER<span>Lab</span></div>
+        <div class="card-intro__tagline">Wissenschaft fundiert · Praxis verändert</div>
+      </div>
+
+      <a class="card-intro__continue" href="#titel" aria-label="Weiter zu den Inhalten">
+        <span>Inhalte entdecken</span>
+        <span class="card-intro__arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
     <!-- Header -->
     <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
-      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="https://moritzdier.github.io/lab/">Wissenschaft & Praxis</a>
+      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="./index.html">Wissenschaft & Praxis</a>
       <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
         <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
           <a class="header-links" href="modelle.html">Modelle & Konzepte</a>
@@ -52,26 +82,30 @@
 
 <!-- Titelbereich -->
 <section id="titel" class="tw-relative tw-mt-[140px] tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]">
-  <div class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col">
+  <div class="hero-layout tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col">
     
-    <div class="tw-flex tw-flex-col tw-place-content-center tw-min-w-0"> 
+    <div class="hero-copy tw-flex tw-flex-col tw-place-content-center tw-min-w-0">
 
       <!-- Headline -->
-      <h1 class="reveal-hero-text tw-max-w-[720px] tw-text-3xl tw-font-semibold tw-leading-tight tw-text-gray-900 max-lg:tw-text-2xl">
-        Wie entstehen Lern- und Entwicklungsräume, die eigenes Denken provozieren und professionelles Handeln ermöglichen?
+      <h1 class="hero-question reveal-hero-text tw-max-w-[720px] tw-text-3xl tw-font-semibold tw-leading-tight tw-text-gray-900 max-lg:tw-text-2xl">
+        Wie entstehen Lern- und Entwicklungsräume, die <strong>eigenes Denken provozieren</strong> und professionelles Handeln ermöglichen?
       </h1>
 
       <!-- EInorndung -->
-      <p class="reveal-hero-text tw-mt-3 tw-max-w-[650px] tw-text-base tw-leading-relaxed tw-text-gray-600">
+      <p class="hero-intro-copy reveal-hero-text tw-mt-3 tw-max-w-[650px] tw-text-base tw-leading-relaxed tw-text-gray-600">
         Ich forsche, lehre und lerne an der spannenden Schnittstelle von Theorie und Praxis der Beruflichen Bildung.
       </p>
       
-      <div class="tw-flex tw-flex-wrap tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug">
-        <span class="reveal-hero-text tw-bg-green-200 tw-p-1 tw-px-6">Dr. Moritz Dier</span><br />
-        <span class="reveal-hero-text tw-text-gray-600">Berufsschullehrer Technikdidaktiker Berufspädagoge</span>
+      <div class="hero-identity tw-flex tw-flex-wrap tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug">
+        <span class="brand-highlight reveal-hero-text tw-p-1 tw-px-6">Dr. Moritz Dier</span><br />
+        <span class="hero-role-line reveal-hero-text tw-text-gray-600">
+          <span>Berufsschullehrer</span>
+          <span>Technikdidaktiker</span>
+          <span>Berufspädagoge</span>
+        </span>
       </div>
 
-      <div class="reveal-hero-text tw-mt-2 tw-flex tw-max-w-[480px] tw-flex-col tw-gap-3 tw-p-2 tw-text-justify max-lg:tw-max-w-full">
+      <div class="hero-about-copy reveal-hero-text tw-mt-2 tw-flex tw-max-w-[480px] tw-flex-col tw-gap-3 tw-p-2 tw-text-justify max-lg:tw-max-w-full">
         <p>
           In meiner Arbeit verbinde ich wissenschaftliche Tiefe mit praktischer Relevanz. Ich entwickle und erforsche Theorien, Konzepte und Modelle für die Berufliche Bildung, die den Wandel in Beruf
           und Gesellschaft aktiv mitgestalten.
@@ -87,7 +121,7 @@
         </p>
       </div>
       
-      <div class="reveal-hero-text tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-overflow-hidden tw-p-2">
+      <div class="hero-contact reveal-hero-text tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-overflow-hidden tw-p-2">
         <div class="tw-flex tw-place-items-center tw-gap-4">
           <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="Kontakt"
             class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-[1px] tw-border-solid tw-border-black tw-bg-gray-50 tw-p-1 tw-pl-4 tw-text-black tw-transition-colors tw-duration-[0.5s] hover:tw-bg-black hover:tw-text-white">
@@ -100,21 +134,17 @@
 
         <!-- Kurzsatz-CTA -->
         <p class="tw-text-sm tw-text-gray-600">
-          <i class="bi bi-chat-left-text tw-mt-[2px] tw-text-gray-500"></i> Wenn Sie mit mir in Austausch kommen oder Kooperationen anstoßen möchten, schreiben Sie mir gern. Ich bin offen für Vorträge, Workshops oder Forschungs- und Entwicklungskooperationen: <!-- sichtbare E-Mail (copy/paste) -->
-          <a href="mailto:Moritz.Dier@uni-bayreuth.de"
-             class="tw-text-sm tw-text-gray-700 hover:tw-underline">
-            Moritz.Dier@uni-bayreuth.de
-          </a>
+          Wenn Sie sich austauschen oder eine Kooperation anstoßen möchten, schreiben Sie mir gern<i class="hero-contact__note-icon bi bi-chat-left-text tw-text-gray-500"></i>
         </p>
       </div>
     </div>
 
-    <div class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center max-lg:tw-max-w-[unset] tw-flex-shrink-0">
-      <div class="tw-relative tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] tw-max-w-[650px] max-lg:tw-h-fit max-lg:tw-max-h-[320px] max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]">
+    <div class="hero-portrait-column tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center max-lg:tw-max-w-[unset] tw-flex-shrink-0">
+      <div class="hero-portrait-frame tw-relative tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] tw-max-w-[650px] max-lg:tw-h-fit max-lg:tw-max-h-[320px] max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]">
         <img
           src="./assets/images/home/MDier2.png"
           alt="Portrait von Dr. Moritz Dier"
-          class="tw-h-auto tw-w-full tw-max-h-[500px] tw-object-contain tw-rounded-xl tw-shadow-md"/>
+          class="hero-portrait tw-h-auto tw-w-full tw-max-h-[500px] tw-object-contain tw-rounded-xl tw-shadow-md"/>
       </div>
     </div>
 
@@ -144,8 +174,8 @@
         <div class="tw-text-xl tw-font-semibold">KI-souveräne berufspädagogisch-didaktische Könnerschaft</div>
         <div class="tw-text-gray-800 tw-text-justify">
           Be&shy;schrei&shy;bung und Ent&shy;wick&shy;lung des pro&shy;fes&shy;sio&shy;nel&shy;len Han&shy;delns von Lehr&shy;kräf&shy;ten an be&shy;ruf&shy;li&shy;chen Schu&shy;len un&shy;ter den Be&shy;din&shy;gun&shy;gen der KI-Ära
-          <a href="https://moritzdier.github.io/lab/assets/docs/KI-souveraene-berufspaedagogisch-didaktische-Koennerschaft.pdf"
-               class="tw-mt-3 tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium tw-text-gray-800 hover:tw-underline"
+          <a href="./assets/docs/KI-souveraene-berufspaedagogisch-didaktische-Koennerschaft.pdf"
+               class="tw-mt-3 tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium tw-text-gray-800"
                target="_blank" rel="noopener">
               <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
               PDF öffnen
@@ -159,7 +189,7 @@
         <div class="tw-text-gray-800 tw-text-justify">
            De&shy;sign und Er&shy;pro&shy;bung in&shy;di&shy;vi&shy;dua&shy;li&shy;sier&shy;ter Lern&shy;pfa&shy;de, be&shy;glei&shy;tet durch Wir&shy;kungs&shy;for&shy;schung (Mo&shy;ti&shy;va&shy;ti&shy;on, Lern&shy;er&shy;folg)
            <a href="https://moritzdier.github.io/KI-clever-nutzen-app/"
-               class="tw-mt-3 tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium tw-text-gray-800 hover:tw-underline"
+               class="tw-mt-3 tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-font-medium tw-text-gray-800"
                target="_blank" rel="noopener">
               <i class="bi bi-lightbulb" aria-hidden="true"></i>
               LernApp Beispiel öffnen
@@ -187,7 +217,7 @@
   <h3 class="reveal-up tw-text-6xl tw-font-medium max-lg:tw-text-3xl">Blog: Impulse & Kurzbeiträge</h3>
   <div class="reveal-up tw-my-4 tw-h-[1px] tw-w-[80%] tw-bg-black"></div>
 
-  <div class="tw-mt-10 tw-flex tw-flex-wrap tw-justify-center tw-gap-8">
+  <div class="blog-card-grid tw-mt-10">
     
    <!-- Blogkarte 7 -->
     <a href="./blog/blog-eintrag-7.html"
@@ -221,7 +251,7 @@
            class="tw-h-[200px] tw-w-full tw-object-cover">
       <div class="tw-p-4">
         <h3 class="tw-text-lg tw-font-semibold">KI im Berufsschulunterricht wirksam nutzen</h3>
-        <p class="tw-mt-2 tw-text-sm">Eine Workshopreihe mit Level 1, 2 und 3</p>
+        <p class="tw-mt-2 tw-text-sm">Vom individuellen Einstieg zum fertigen Unterrichtspaket</p>
         <span class="tw-inline-block tw-mt-3 tw-text-sm">Weiterlesen →</span>
       </div>
     </a>
@@ -378,20 +408,17 @@
   </div>
 </section>
 
-    <section class="tw-mt-12 tw-rounded-2xl tw-border tw-p-6 md:tw-p-8" style="background-color:#bbf7d0;">
-  <h3 class="tw-mt-0 tw-mb-2 tw-text-xl tw-font-semibold">
-    Haben Sie Interesse?
-  </h3>
-   <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full">
-          <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20Austausch,%20Vortrag,%20Workshop..." aria-label="E-Mail" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
-            <span>E-Mail an</span>
-            <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
-              <i class="bi bi-arrow-up-right"></i>
-            </div>
-          </a>
-
-    <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20Austausch,%20Vortrag,%20Workshop..."
-       class="tw-text-sm tw-text-gray-800 hover:tw-underline">
+<section class="contact-cta contact-cta--violet">
+  <h3 class="contact-cta__title">Lassen Sie uns ins Gespräch kommen.</h3>
+  <p class="contact-cta__copy">
+    Für Austausch, Vorträge, Workshops sowie Forschungs- und Entwicklungskooperationen bin ich gern ansprechbar.
+  </p>
+  <div class="contact-cta__actions">
+    <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20zu%20Austausch%20oder%20Zusammenarbeit" aria-label="Kontakt aufnehmen" class="contact-cta__button">
+      <span>Kontakt aufnehmen</span>
+      <span class="contact-cta__button-icon"><i class="bi bi-arrow-up-right"></i></span>
+    </a>
+    <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20zu%20Austausch%20oder%20Zusammenarbeit" class="contact-cta__email">
       Moritz.Dier@uni-bayreuth.de
     </a>
   </div>
@@ -400,7 +427,7 @@
     <!-- Footer -->
 <hr class="tw-mt-4" />
 <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
-  <a class="dierlab-footer-brand" href="https://moritzdier.github.io/lab/" aria-label="DIERLab Startseite">
+  <a class="dierlab-footer-brand" href="./index.html" aria-label="DIERLab Startseite">
     <span class="dierlab-footer-copy">
       <span class="dierlab-footer-name">DIERLab</span>
       <span class="dierlab-footer-slogan">Wissenschaft &amp; Praxis für die Berufliche Bildung</span>
@@ -408,12 +435,12 @@
   </a>
   <div class="tw-flex tw-flex-col tw-items-center tw-gap-2">
     <div class="tw-flex tw-items-center tw-gap-6 tw-text-2xl">
-      <a href="https://moritzdier.github.io/lab/" aria-label="Startseite"><i class="bi bi-house-door"></i></a>
+      <a href="./index.html" aria-label="Startseite"><i class="bi bi-house-door"></i></a>
       <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
-      <a href="/lab/impressum.html" aria-label="Impressum und Datenschutz"><i class="bi bi-shield-check"></i></a>
+      <a href="./impressum.html" aria-label="Impressum und Datenschutz"><i class="bi bi-shield-check"></i></a>
     </div>
 
-    <a href="/lab/impressum.html" aria-label="Impressum und Datenschutz" class="tw-text-[9px] hover:tw-underline">
+    <a href="./impressum.html" aria-label="Impressum und Datenschutz" class="tw-text-[9px]">
       Impressum & Datenschutz
     </a>
   </div>
@@ -422,6 +449,6 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js?v=2026-08-21-v2"></script>
   </body>
 </html>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Moritz Dier | Blog</title>
     <meta name="description" content="Kurzbeiträge zu aktuellen Themen" />
-    <link rel="icon" type="image/x-icon" href="/lab/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/lab/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/lab/assets/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/lab/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Blog | Dr. Moritz Dier" />
@@ -18,7 +18,7 @@
     <meta property="og:image" content="https://moritzdier.github.io/lab/assets/logoN.png" />
 
     <link rel="stylesheet" href="./css/tailwind-build.css">
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.css?v=2026-08-21-v2" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
@@ -27,7 +27,7 @@
 
     <!-- Header -->
     <header class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-px-4 lg:tw-justify-around">
-      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="https://moritzdier.github.io/lab/">Wissenschaft &amp; Praxis</a>
+      <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="./index.html">Wissenschaft &amp; Praxis</a>
       <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
         <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
           <a class="header-links" href="modelle.html">Modelle &amp; Konzepte</a>
@@ -56,16 +56,15 @@
     >
       <div class="tw-flex tw-flex-col tw-space-y-6 tw-max-w-[900px]">
         <a
-          href="https://moritzdier.github.io/lab/"
-          class="tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-text-gray-600 hover:tw-underline"
+          href="./index.html"
+          class="tw-inline-flex tw-items-center tw-gap-2 tw-text-sm tw-text-gray-600"
         >
           <i class="bi bi-arrow-left"></i> Zurück zur Startseite
         </a>
-
-        <h1
+<h1
           class="tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug"
         >
-          <span class="tw-p-1 tw-px-6" style="background-color: #fbbf24;">Blogbeiträge</span><br />
+          <span class="brand-highlight tw-p-1 tw-px-6">Blogbeiträge</span><br />
           <span class="reveal-hero-text tw-text-gray-600">Aktuell &amp; informativ</span>
         </h1>
       
@@ -84,7 +83,7 @@
       id="blog"
       class="reveal-hero-text tw-relative tw-flex tw-min-h-[20vh] tw-w-full tw-flex-col tw-items-center tw-overflow-hidden tw-px-6 tw-py-6"
     >
-      <div class="tw-mt-4 tw-flex tw-flex-wrap tw-justify-center tw-gap-8">
+      <div class="blog-card-grid tw-mt-4">
        
    <!-- Blogkarte 7 -->
     <a href="./blog/blog-eintrag-7.html"
@@ -117,7 +116,7 @@
            class="tw-h-[200px] tw-w-full tw-object-cover">
       <div class="tw-p-4">
         <h3 class="tw-text-lg tw-font-semibold">KI im Berufsschulunterricht wirksam nutzen</h3>
-        <p class="tw-mt-2 tw-text-sm">Eine Workshopreihe mit Level 1, 2 und 3</p>
+        <p class="tw-mt-2 tw-text-sm">Vom individuellen Einstieg zum fertigen Unterrichtspaket</p>
         <span class="tw-inline-block tw-mt-3 tw-text-sm">Weiterlesen →</span>
       </div>
     </a>
@@ -179,10 +178,26 @@
       </div>
     </section>
 
+<section class="contact-cta contact-cta--teal">
+  <h3 class="contact-cta__title">Lassen Sie uns ins Gespräch kommen.</h3>
+  <p class="contact-cta__copy">
+    Für Austausch, Vorträge, Workshops sowie Forschungs- und Entwicklungskooperationen bin ich gern ansprechbar.
+  </p>
+  <div class="contact-cta__actions">
+    <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20zu%20Austausch%20oder%20Zusammenarbeit" aria-label="Kontakt aufnehmen" class="contact-cta__button">
+      <span>Kontakt aufnehmen</span>
+      <span class="contact-cta__button-icon"><i class="bi bi-arrow-up-right"></i></span>
+    </a>
+    <a href="mailto:Moritz.Dier@uni-bayreuth.de?subject=Anfrage%20zu%20Austausch%20oder%20Zusammenarbeit" class="contact-cta__email">
+      Moritz.Dier@uni-bayreuth.de
+    </a>
+  </div>
+</section>
+
     <!-- Footer -->
 <hr class="tw-mt-4" />
 <footer class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
-  <a class="dierlab-footer-brand" href="https://moritzdier.github.io/lab/" aria-label="DIERLab Startseite">
+  <a class="dierlab-footer-brand" href="./index.html" aria-label="DIERLab Startseite">
     <span class="dierlab-footer-copy">
       <span class="dierlab-footer-name">DIERLab</span>
       <span class="dierlab-footer-slogan">Wissenschaft &amp; Praxis für die Berufliche Bildung</span>
@@ -190,12 +205,12 @@
   </a>
   <div class="tw-flex tw-flex-col tw-items-center tw-gap-2">
     <div class="tw-flex tw-items-center tw-gap-6 tw-text-2xl">
-      <a href="https://moritzdier.github.io/lab/" aria-label="Startseite"><i class="bi bi-house-door"></i></a>
+      <a href="./index.html" aria-label="Startseite"><i class="bi bi-house-door"></i></a>
       <a href="mailto:Moritz.Dier@uni-bayreuth.de" aria-label="E-Mail"><i class="bi bi-envelope"></i></a>
-      <a href="/lab/impressum.html" aria-label="Impressum und Datenschutz"><i class="bi bi-shield-check"></i></a>
+      <a href="./impressum.html" aria-label="Impressum und Datenschutz"><i class="bi bi-shield-check"></i></a>
     </div>
 
-    <a href="/lab/impressum.html" aria-label="Impressum und Datenschutz" class="tw-text-[9px] hover:tw-underline">
+    <a href="./impressum.html" aria-label="Impressum und Datenschutz" class="tw-text-[9px]">
       Impressum & Datenschutz
     </a>
   </div>
@@ -204,6 +219,6 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js?v=2026-08-21-v2"></script>
   </body>
 </html>
