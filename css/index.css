@@ -146,9 +146,8 @@ body {
     inset: 0;
     z-index: 0;
     background: var(--brand-violet);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
     opacity: 1;
-    transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 700ms ease;
+    transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1);
     will-change: opacity;
 }
 
@@ -162,10 +161,9 @@ body.intro-active {
 
 .card-intro.is-leaving .card-intro__backdrop {
     opacity: 0;
-    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0);
-    transition-delay: 950ms, 950ms;
-    transition-duration: 1450ms, 700ms;
-    transition-timing-function: ease-in-out, ease;
+    transition-delay: 950ms;
+    transition-duration: 1450ms;
+    transition-timing-function: ease-in-out;
 }
 
 .card-intro[hidden] {
@@ -1002,8 +1000,87 @@ header > .collapsible-header{
 
 
 @media (max-width: 1279px) {
+    body.mobile-menu-open {
+        overflow: hidden;
+    }
+
     #collapse-btn {
+        display: flex;
+        position: absolute;
+        z-index: 1100;
+    }
+
+    #collapse-btn.brand-menu-toggle {
+        top: calc((clamp(84px, 8vw, 112px) - 2.75rem) / 2);
+        right: max(0.75rem, env(safe-area-inset-right));
+        width: auto;
+        min-width: 4.75rem;
+        height: 2.75rem;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        padding: 0.4rem 0.55rem;
+        border-radius: 0.75rem;
+        background: rgb(255 255 255 / 88%);
+        color: var(--brand-ink);
+        box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+        backdrop-filter: blur(8px);
+    }
+
+    .brand-menu-toggle__shapes {
+        display: flex;
+        width: 0.75rem;
+        flex: 0 0 0.75rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.16rem;
+    }
+
+    .brand-menu-toggle__square,
+    .brand-menu-toggle__circle {
         display: block;
+        width: 0.48rem;
+        height: 0.48rem;
+        transition: transform 0.25s ease;
+    }
+
+    .brand-menu-toggle__square {
+        background: var(--brand-violet);
+    }
+
+    .brand-menu-toggle__circle {
+        border-radius: 50%;
+        background: var(--brand-teal);
+    }
+
+    .brand-menu-toggle__triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 0.27rem solid transparent;
+        border-bottom: 0.27rem solid transparent;
+        border-left: 0.48rem solid var(--brand-teal);
+        transition: transform 0.25s ease;
+    }
+
+    .brand-menu-toggle__label {
+        font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .brand-menu-toggle.is-open .brand-menu-toggle__square {
+        transform: translateX(0.14rem);
+    }
+
+    .brand-menu-toggle.is-open .brand-menu-toggle__circle {
+        transform: translateX(-0.14rem);
+    }
+
+    .brand-menu-toggle.is-open .brand-menu-toggle__triangle {
+        transform: rotate(90deg);
     }
 
     header.tw-top-0 {
@@ -1016,22 +1093,62 @@ header > .collapsible-header{
 
     header .collapsible-header {
         position: fixed;
-        right: 0px;
+        z-index: 1000;
+        top: clamp(4.75rem, 8vw, 6.25rem);
+        right: max(0.75rem, env(safe-area-inset-right));
         flex-direction: column;
         opacity: 0;
-        height: 100vh;
-        min-height: 100vh;
-        height: 100dvh;
-        width: 0vw;
-        justify-content: space-between;
-        padding: 5px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        place-items: end;
+        width: min(calc(100% - 1.5rem), 280px);
+        height: auto;
+        min-height: 0;
+        max-height: calc(100dvh - clamp(5.5rem, 10vw, 7rem));
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1rem;
         background-color: #ffffff;
         color: #000000;
+        border: 1px solid rgb(0 0 0 / 8%);
+        border-radius: 1rem;
+        overflow-x: hidden;
         overflow-y: auto;
-        box-shadow: 2px 0px 3px #000;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        box-shadow: -4px 0 18px rgb(0 0 0 / 18%);
+        pointer-events: none;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: transform 0.3s ease, opacity 0.2s ease, visibility 0s linear 0.3s;
+    }
+
+    header .collapsible-header.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+        transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+
+    header .collapsible-header > div:first-child {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: stretch;
+        gap: 0.25rem;
+        margin-top: 0;
+    }
+
+    header .collapsible-header > div:last-child {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    header .collapsible-header .header-links {
+        width: 100%;
+        min-width: 0;
+        padding: 0.75rem 0.875rem;
+        white-space: normal;
     }
 
     .header-links{

@@ -3,53 +3,52 @@
 const RESPONSIVE_WIDTH = 1280
 
 let headerWhiteBg = false
-let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH
 const collapseBtn = document.getElementById("collapse-btn")
 const collapseHeaderItems = document.getElementById("collapsed-header-items")
 
+function setHeaderOpen(isOpen) {
+    if (!collapseBtn || !collapseHeaderItems) return
 
-
-function onHeaderClickOutside(e) {
-
-    if (!collapseHeaderItems.contains(e.target)) {
-        toggleHeader()
-    }
-
+    collapseHeaderItems.classList.toggle("is-open", isOpen)
+    collapseBtn.classList.toggle("is-open", isOpen)
+    collapseBtn.setAttribute("aria-expanded", String(isOpen))
+    collapseBtn.setAttribute("aria-label", isOpen ? "Menü schließen" : "Menü öffnen")
+    document.body.classList.toggle("mobile-menu-open", isOpen)
 }
-
 
 function toggleHeader() {
-    if (isHeaderCollapsed) {
-        // collapseHeaderItems.classList.remove("max-md:tw-opacity-0")
-        collapseHeaderItems.classList.add("opacity-100",)
-        collapseHeaderItems.style.width = "60vw"
-        collapseBtn.classList.remove("bi-list")
-        collapseBtn.classList.add("bi-x", "max-lg:tw-fixed")
-        isHeaderCollapsed = false
-
-        setTimeout(() => window.addEventListener("click", onHeaderClickOutside), 1)
-
-    } else {
-        collapseHeaderItems.classList.remove("opacity-100")
-        collapseHeaderItems.style.width = "0vw"
-        collapseBtn.classList.remove("bi-x", "max-lg:tw-fixed")
-        collapseBtn.classList.add("bi-list")
-        isHeaderCollapsed = true
-        window.removeEventListener("click", onHeaderClickOutside)
-
-    }
+    const isOpen = collapseHeaderItems?.classList.contains("is-open")
+    setHeaderOpen(!isOpen)
 }
 
-function responsive() {
-    if (window.innerWidth >= RESPONSIVE_WIDTH) {
-        collapseHeaderItems.style.width = ""
-
-    } else {
-        isHeaderCollapsed = true
+collapseHeaderItems?.addEventListener("click", (event) => {
+    if (event.target.closest("a") && window.innerWidth < RESPONSIVE_WIDTH) {
+        setHeaderOpen(false)
     }
-}
+})
 
-window.addEventListener("resize", responsive)
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setHeaderOpen(false)
+})
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= RESPONSIVE_WIDTH) setHeaderOpen(false)
+})
+
+if (collapseBtn && collapseHeaderItems) {
+    collapseBtn.classList.remove("bi", "bi-list", "bi-x")
+    collapseBtn.classList.add("brand-menu-toggle")
+    collapseBtn.innerHTML = `
+        <span class="brand-menu-toggle__shapes" aria-hidden="true">
+            <span class="brand-menu-toggle__square"></span>
+            <span class="brand-menu-toggle__circle"></span>
+            <span class="brand-menu-toggle__triangle"></span>
+        </span>
+        <span class="brand-menu-toggle__label" aria-hidden="true">Menü</span>
+    `
+    collapseBtn.setAttribute("aria-controls", "collapsed-header-items")
+    setHeaderOpen(false)
+}
 
 
 /**
@@ -182,9 +181,23 @@ if (cardIntro) {
 
     const onTouchMove = (event) => {
         const currentY = event.touches[0]?.clientY
-        if (touchStartY !== null && currentY !== undefined && touchStartY - currentY > 24) {
+        if (touchStartY === null || currentY === undefined) return
+
+        const swipeDistance = touchStartY - currentY
+
+        if (!introDismissed && swipeDistance > 24) {
             dismissIntro(event)
+            return
         }
+
+        if (introDismissed && window.scrollY <= 1 && swipeDistance < -48) {
+            showIntro(event)
+            touchStartY = null
+        }
+    }
+
+    const onTouchEnd = () => {
+        touchStartY = null
     }
 
     if (skipIntro) {
@@ -197,6 +210,8 @@ if (cardIntro) {
     window.addEventListener("keydown", onKeydown)
     window.addEventListener("touchstart", onTouchStart, { passive: true })
     window.addEventListener("touchmove", onTouchMove, { passive: false })
+    window.addEventListener("touchend", onTouchEnd, { passive: true })
+    window.addEventListener("touchcancel", onTouchEnd, { passive: true })
     window.addEventListener("wheel", onWheel, { passive: false })
     continueLink?.addEventListener("click", dismissIntro)
 }
