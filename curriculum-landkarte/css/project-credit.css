@@ -1,0 +1,103 @@
+.project-credit {
+  min-height: 64px;
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.dier-lab-mark {
+  display: block;
+  flex: 0 0 150px;
+}
+
+.dier-lab-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-credit p {
+  margin: 0;
+  max-width: 760px;
+  color: var(--color-muted);
+  font-size: 8px;
+  line-height: 1.55;
+  letter-spacing: .015em;
+}
+
+.project-credit p a {
+  color: var(--color-purple);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-credit a:hover,
+.project-credit a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hint {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.site-return {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-navy);
+  text-decoration: none;
+  transition: opacity .18s ease;
+}
+
+.site-return img {
+  display: block;
+  width: 126px;
+  height: auto;
+}
+
+.site-return-arrow {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.site-return:hover,
+.site-return:focus-visible {
+  opacity: .7;
+  outline: 0;
+}
+
+@media (max-width: 720px) {
+  .hint {
+    align-items: center;
+  }
+
+  .project-credit {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .dier-lab-mark {
+    flex-basis: 112px;
+  }
+
+  .project-credit p {
+    font-size: 7.5px;
+  }
+}
+
+@media print {
+  .project-credit {
+    min-height: 50px;
+  }
+
+  .dier-lab-mark {
+    flex-basis: 125px;
+  }
+}
