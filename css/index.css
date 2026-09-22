@@ -1575,3 +1575,10 @@ header > .collapsible-header{
         grid-template-columns: 1fr;
     }
 }
+
+/* Keep entries within each publication year clearly separated. */
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
